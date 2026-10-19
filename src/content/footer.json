@@ -1,0 +1,84 @@
+[
+  {
+    "id": 337,
+    "date": "2024-03-30T18:52:36",
+    "date_gmt": "2024-03-30T18:52:36",
+    "guid": {
+      "rendered": "https://creativate.centralcabs.in/?post_type=footer&#038;p=337"
+    },
+    "modified": "2025-02-24T05:59:47",
+    "modified_gmt": "2025-02-24T05:59:47",
+    "slug": "main-footer",
+    "status": "publish",
+    "type": "footer",
+    "link": "https://creativate.centralcabs.in/footer/main-footer/",
+    "title": {
+      "rendered": "Main Footer"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "class_list": [
+      "post-337",
+      "footer",
+      "type-footer",
+      "status-publish",
+      "hentry",
+      "entry"
+    ],
+    "acf": {
+      "footer_banner_image": "/wp-content/uploads/2024/03/creativate-footer.svg",
+      "footer_top_menu": [
+        {
+          "menu_label": "Work",
+          "route_link": "our-work",
+          "target_id": "our-work",
+          "target_stripe": false
+        },
+        {
+          "menu_label": "Services",
+          "route_link": "https://www.creativate.in/#service",
+          "target_id": "services",
+          "target_stripe": false
+        },
+        {
+          "menu_label": "Blog",
+          "route_link": "our-blog",
+          "target_id": "our-blog",
+          "target_stripe": false
+        }
+      ],
+      "social_links": [
+        {
+          "link": "https://www.facebook.com/profile.php?id=100095059033738",
+          "icon": "/wp-content/uploads/2024/03/facebook.png"
+        },
+        {
+          "link": "https://www.instagram.com/team.creativate/",
+          "icon": "/wp-content/uploads/2024/03/instagram.png"
+        },
+        {
+          "link": "https://wa.me/+918848015809",
+          "icon": "/wp-content/uploads/2024/03/whatsapp-icon.png"
+        }
+      ],
+      "footer_bottom_menu": [
+        {
+          "menu_label": "Address: 8F, Royal Palace, Manjelipadam Road, Vadakkekotta, Ernakulam | 682301",
+          "target_id": ""
+        },
+        {
+          "menu_label": "Terms & Conditions",
+          "target_id": "terms-and-conditions"
+        },
+        {
+          "menu_label": "Privacy Policy",
+          "target_id": "privacy-policy"
+        }
+      ]
+    }
+  }
+]

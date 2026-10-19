@@ -1,0 +1,72 @@
+// # Media Query
+// ==================== START: Standard media size based on the tailwindcss =======================
+$st-screen-xs: 420px;
+$st-screen-sm: 640px;
+$st-screen-md: 768px;
+$st-screen-lg: 1024px;
+$st-screen-xl: 1280px;
+$st-screen-2xl: 1460px;
+
+
+@mixin st-media-min-xs {
+    @media (min-width: #{$st-screen-xs}) {
+        @content;
+    }
+}
+@mixin st-media-max-xs {
+    @media (max-width: #{$st-screen-xs - 1}) {
+        @content;
+    }
+}
+
+@mixin st-media-min-sm {
+    @media (min-width: #{$st-screen-sm}) {
+        @content;
+    }
+}
+@mixin st-media-max-sm {
+    @media (max-width: #{$st-screen-sm - 1}) {
+        @content;
+    }
+}
+@mixin st-media-min-md {
+    @media (min-width: #{$st-screen-md}) {
+        @content;
+    }
+}
+@mixin st-media-max-md {
+    @media (max-width: #{$st-screen-md - 1}) {
+        @content;
+    }
+}
+@mixin st-media-min-lg {
+    @media (min-width: #{$st-screen-lg}) {
+        @content;
+    }
+}
+@mixin st-media-max-lg {
+    @media (max-width: #{$st-screen-lg - 1}) {
+        @content;
+    }
+}
+@mixin st-media-min-xl {
+    @media (min-width: #{$st-screen-xl}) {
+        @content;
+    }
+}
+@mixin st-media-max-xl {
+    @media (max-width: #{$st-screen-xl - 1}) {
+        @content;
+    }
+}
+@mixin st-media-min-2xl {
+    @media (min-width: #{$st-screen-2xl}) {
+        @content;
+    }
+}
+@mixin st-media-max-2xl {
+    @media (max-width: #{$st-screen-2xl - 1}) {
+        @content;
+    }
+}
+// ==================== END: Standard media size based on the tailwindcss =======================

@@ -1,0 +1,46 @@
+// @import '@scss/mixins/_breakpoints.scss';
+
+.group {
+    &__inputMaterial {
+        min-width: 310px;
+    }
+    .input {
+        &:focus {
+            outline: 0 !important;
+        }
+        &:focus,
+        &:valid,
+        &:disabled {
+            ~ label {
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 18px;
+                top: -1px;
+                background-color: #ffffff;
+                padding: 0 5px;
+                transition: 0.2s all ease-in;
+            }
+        }
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover {
+            border: 1px solid #0000004d;
+            -webkit-text-fill-color: #000;
+            -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+        &:-webkit-autofill:focus {
+            border: 1px solid #1e48c9;
+            -webkit-text-fill-color: #000;
+            -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+    }
+}
+
+.input-error {
+    transition: opacity 0.25s ease-in-out 0.2s, top 0.25s ease-in-out 0.2s;
+    &.show {
+        z-index: 0;
+        opacity: 1;
+    }
+}

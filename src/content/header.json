@@ -1,0 +1,78 @@
+[
+  {
+    "id": 363,
+    "date": "2024-03-30T19:20:37",
+    "date_gmt": "2024-03-30T19:20:37",
+    "guid": {
+      "rendered": "https://creativate.centralcabs.in/?post_type=header&#038;p=363"
+    },
+    "modified": "2025-12-03T13:51:11",
+    "modified_gmt": "2025-12-03T13:51:11",
+    "slug": "main-header",
+    "status": "publish",
+    "type": "header",
+    "link": "https://creativate.centralcabs.in/header/main-header/",
+    "title": {
+      "rendered": "Main Header"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "class_list": [
+      "post-363",
+      "header",
+      "type-header",
+      "status-publish",
+      "hentry",
+      "entry"
+    ],
+    "acf": {
+      "header_button": {
+        "button_text": "",
+        "button_link": ""
+      },
+      "header_left_menu": [
+        {
+          "target_stripe": false,
+          "ctamenu": false,
+          "menu_label": "Work",
+          "route_link": "https://www.creativate.in/our-work",
+          "target_id": "our-work"
+        },
+        {
+          "target_stripe": false,
+          "ctamenu": false,
+          "menu_label": "Services",
+          "route_link": "https://www.creativate.in/#service",
+          "target_id": "service"
+        },
+        {
+          "target_stripe": false,
+          "ctamenu": false,
+          "menu_label": "Blog",
+          "route_link": "https://www.creativate.in/our-blog",
+          "target_id": "our-blog"
+        }
+      ],
+      "header_right_menu": [
+        {
+          "target_stripe": false,
+          "cta_menu": false,
+          "menu_label": "Contact Us",
+          "route_link": "https://www.creativate.in/#contact-us",
+          "target_id": "contact-us"
+        },
+        {
+          "target_stripe": false,
+          "cta_menu": true,
+          "menu_label": "Book free consultation",
+          "route_link": "https://cal.com/aakarsh-b/30min",
+          "target_id": ""
+        }
+      ]
+    }
+  }
+]

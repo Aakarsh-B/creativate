@@ -1,0 +1,170 @@
+[
+  {
+    "id": 592,
+    "date": "2024-05-10T15:59:27",
+    "date_gmt": "2024-05-10T15:59:27",
+    "guid": {
+      "rendered": "https://creativate.centralcabs.in/?post_type=our-work&#038;p=592"
+    },
+    "modified": "2024-05-12T18:06:57",
+    "modified_gmt": "2024-05-12T18:06:57",
+    "slug": "education-today-online",
+    "status": "publish",
+    "type": "our-work",
+    "link": "https://creativate.centralcabs.in/our-work/education-today-online/",
+    "title": {
+      "rendered": "Education Today Online"
+    },
+    "content": {
+      "rendered": "\n<h3 class=\"wp-block-heading\">The Challenge</h3>\n\n\n\n<p>Education Today Online, a leading portal for insightful education articles and expert opinions, sought a website refresh.&nbsp;</p>\n\n\n\n<p>Their goal? To create a platform that reflected their brand values and vast resource library while simultaneously improving user experience and engagement. The key challenges were:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li><strong>Brand Alignment: </strong>The existing website did not fully reflect Education Today Online&#8217;s established brand identity.</li>\n\n\n\n<li><strong>Speed Optimization: </strong>A vast library of valuable documents caused slow loading times, hindering user experience.</li>\n\n\n\n<li><strong>Boosting Engagement: </strong>Increasing user interaction and time spent on the site for a more engaging learning experience.</li>\n\n\n\n<li><strong>Monetization: </strong>Integrating a sustainable revenue generation model to support the platform&#8217;s growth.</li>\n</ul>\n\n\n\n<div style=\"height:48px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n\n\n\n<h3 class=\"wp-block-heading\">The Solution</h3>\n\n\n\n<p>We approached these multifaceted challenges with a systematic plan. Recognizing the need for brand alignment, we proposed a website redesign that mirrored Education Today Online&#8217;s unique brand identity and the informative, engaging content it provides. To enhance user engagement, we opted for mini-games, fostering interaction while upholding the brand&#8217;s informative tone. To generate revenue, we planned to incorporate advertisement spaces, boosting website visibility while creating an income stream. Finally, to improve website speed and reduce bounce rates, we prioritized website optimization by eliminating unnecessary elements that impeded loading times.</p>\n\n\n\n<div style=\"height:32px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n\n\n\n<h3 class=\"wp-block-heading\">The Creative Process</h3>\n\n\n\n<p>The transformation began with a complete website redesign. We ensured visual and content cohesion with Education Today Online&#8217;s brand identity, creating a more user-friendly experience.</p>\n\n\n\n<figure class=\"wp-block-image size-large\"><img loading=\"lazy\" decoding=\"async\" width=\"1024\" height=\"576\" src=\"/wp-content/uploads/2024/05/wireframe-1024x576.jpg\" alt=\"\" class=\"wp-image-615\" srcset=\"/wp-content/uploads/2024/05/wireframe-1024x576.jpg 1024w, /wp-content/uploads/2024/05/wireframe-300x169.jpg 300w, /wp-content/uploads/2024/05/wireframe-768x432.jpg 768w, /wp-content/uploads/2024/05/wireframe-1536x864.jpg 1536w, /wp-content/uploads/2024/05/wireframe-800x450.jpg 800w, /wp-content/uploads/2024/05/wireframe.jpg 1920w\" sizes=\"auto, (max-width: 1024px) 100vw, 1024px\" /></figure>\n\n\n\n<p>Next, we introduced four engaging mini-quizzes, transforming the website into a more interactive and enjoyable platform for users. These quizzes tested knowledge, provided immediate feedback, and encouraged further exploration of the website&#8217;s extensive resources.&nbsp;</p>\n\n\n\n<figure class=\"wp-block-image size-large\"><img loading=\"lazy\" decoding=\"async\" width=\"1024\" height=\"576\" src=\"/wp-content/uploads/2024/05/quizzes-and-games-1024x576.jpg\" alt=\"\" class=\"wp-image-616\" srcset=\"/wp-content/uploads/2024/05/quizzes-and-games-1024x576.jpg 1024w, /wp-content/uploads/2024/05/quizzes-and-games-300x169.jpg 300w, /wp-content/uploads/2024/05/quizzes-and-games-768x432.jpg 768w, /wp-content/uploads/2024/05/quizzes-and-games-1536x864.jpg 1536w, /wp-content/uploads/2024/05/quizzes-and-games-800x450.jpg 800w, /wp-content/uploads/2024/05/quizzes-and-games.jpg 1920w\" sizes=\"auto, (max-width: 1024px) 100vw, 1024px\" /></figure>\n\n\n\n<p>A dedicated ad placement area was created, allowing the brand to integrate advertisements that generated revenue opportunities while remaining relevant to the website&#8217;s audience.</p>\n\n\n\n<p>A critical challenge involved integrating the sub-brand, Education Today Journal&#8217;s vast content library, while maintaining website speed. We addressed this challenge by streamlining website plug-ins, ensuring all journals remained readily accessible, enhancing overall security, and minimizing vulnerability to threats while significantly improving website speed.</p>\n\n\n\n<p>This strategic website revamp empowered Education Today Online to provide a user-centric platform that fosters engagement, brand identity, and revenue generation.&nbsp;</p>\n\n\n\n<p>The result? A transformed website that serves as a hub for modern, interactive learning, empowering users to explore a world of knowledge in a dynamic and engaging way.</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Galeno, a leading hygiene solutions provider in the UAE, sought to refresh its website and refine its brand identity while retaining its existing logo and core brand message. Their primary concern was the website&#8217;s cumbersome checkout process and the lack of secure payment options. With a decade of B2B expertise, Galeno desired to seamlessly expand into the B2C space by enhancing user experience while shopping via their website.</p>\n",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "class_list": [
+      "post-592",
+      "our-work",
+      "type-our-work",
+      "status-publish",
+      "hentry",
+      "entry"
+    ],
+    "acf": {
+      "metadata": {
+        "title": "Education Today Online",
+        "description": "Education Today Online",
+        "keywords": ""
+      },
+      "current_blog_url": "education-today-online",
+      "featured_image": "/wp-content/uploads/2024/05/Feature-image-1.jpg",
+      "banner_image": "/wp-content/uploads/2024/05/Cover-Image.jpg",
+      "about_client": {
+        "website_url": "https://educationtodayonline.com",
+        "service": "Website Revamp",
+        "client": "Education Today Online",
+        "date": "April 28, 2024",
+        "location": "India"
+      },
+      "other_works": [
+        393,
+        591
+      ]
+    }
+  },
+  {
+    "id": 591,
+    "date": "2024-05-03T14:34:55",
+    "date_gmt": "2024-05-03T14:34:55",
+    "guid": {
+      "rendered": "https://creativate.centralcabs.in/?post_type=our-work&#038;p=591"
+    },
+    "modified": "2024-05-12T18:11:25",
+    "modified_gmt": "2024-05-12T18:11:25",
+    "slug": "galeno-hygiene",
+    "status": "publish",
+    "type": "our-work",
+    "link": "https://creativate.centralcabs.in/our-work/galeno-hygiene/",
+    "title": {
+      "rendered": "Galeno Hygiene"
+    },
+    "content": {
+      "rendered": "\n<h3 class=\"wp-block-heading\">The Challenge</h3>\n\n\n\n<p>Galeno, a leading hygiene solutions provider in the UAE, sought to refresh its website and refine its brand identity while retaining its existing logo and core brand message. Their primary concern was the website&#8217;s cumbersome checkout process and the lack of secure payment options. With a decade of B2B expertise, Galeno desired to seamlessly expand into the B2C space by enhancing user experience while shopping via their website.</p>\n\n\n\n<div style=\"height:48px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n\n\n\n<h3 class=\"wp-block-heading\">The Creative Process</h3>\n\n\n\n<h4 class=\"wp-block-heading\">Branding</h4>\n\n\n\n<p>The existing logo was retained, as per the client&#8217;s request, recognizing Galeno&#8217;s established brand identity with its ten-year industry presence. To support this identity and cultivate a cohesive brand voice and messaging across all platforms, we developed a comprehensive brand kit. This kit included a defined set of fonts for consistent use in all brand collaterals, strengthening brand recognition and product communication. We also designed social media templates with captivating visuals to elevate Galeno&#8217;s social media marketing efforts.</p>\n\n\n\n<figure class=\"wp-block-image size-large is-resized\"><img loading=\"lazy\" decoding=\"async\" width=\"1024\" height=\"576\" src=\"/wp-content/uploads/2024/05/brand-kit-1-1024x576.jpg\" alt=\"\" class=\"wp-image-649\" style=\"width:840px;height:auto\" srcset=\"/wp-content/uploads/2024/05/brand-kit-1-1024x576.jpg 1024w, /wp-content/uploads/2024/05/brand-kit-1-300x169.jpg 300w, /wp-content/uploads/2024/05/brand-kit-1-768x432.jpg 768w, /wp-content/uploads/2024/05/brand-kit-1-1536x864.jpg 1536w, /wp-content/uploads/2024/05/brand-kit-1-800x450.jpg 800w, /wp-content/uploads/2024/05/brand-kit-1.jpg 1920w\" sizes=\"auto, (max-width: 1024px) 100vw, 1024px\" /></figure>\n\n\n\n<p>The revised approach ensured a seamless user experience for customers while maintaining brand consistency across all touchpoints. With a secure and user-friendly website, coupled with a refreshed brand identity, Galeno was well-positioned to expand its reach and solidify its position in the UAE&#8217;s hygiene solutions market.</p>\n\n\n\n<figure class=\"wp-block-image size-large\"><img loading=\"lazy\" decoding=\"async\" width=\"1024\" height=\"576\" src=\"/wp-content/uploads/2024/05/colors-3-2-1024x576.jpg\" alt=\"\" class=\"wp-image-638\" srcset=\"/wp-content/uploads/2024/05/colors-3-2-1024x576.jpg 1024w, /wp-content/uploads/2024/05/colors-3-2-300x169.jpg 300w, /wp-content/uploads/2024/05/colors-3-2-768x432.jpg 768w, /wp-content/uploads/2024/05/colors-3-2-1536x864.jpg 1536w, /wp-content/uploads/2024/05/colors-3-2-800x450.jpg 800w, /wp-content/uploads/2024/05/colors-3-2.jpg 1920w\" sizes=\"auto, (max-width: 1024px) 100vw, 1024px\" /></figure>\n\n\n\n<figure class=\"wp-block-image size-large\"><img loading=\"lazy\" decoding=\"async\" width=\"1024\" height=\"576\" src=\"/wp-content/uploads/2024/05/colors-4-2-1024x576.jpg\" alt=\"\" class=\"wp-image-639\" srcset=\"/wp-content/uploads/2024/05/colors-4-2-1024x576.jpg 1024w, /wp-content/uploads/2024/05/colors-4-2-300x169.jpg 300w, /wp-content/uploads/2024/05/colors-4-2-768x432.jpg 768w, /wp-content/uploads/2024/05/colors-4-2-1536x864.jpg 1536w, /wp-content/uploads/2024/05/colors-4-2-800x450.jpg 800w, /wp-content/uploads/2024/05/colors-4-2.jpg 1920w\" sizes=\"auto, (max-width: 1024px) 100vw, 1024px\" /></figure>\n\n\n\n<figure class=\"wp-block-image size-large\"><img loading=\"lazy\" decoding=\"async\" width=\"1024\" height=\"576\" src=\"/wp-content/uploads/2024/05/colors-1024x576.jpg\" alt=\"\" class=\"wp-image-633\" srcset=\"/wp-content/uploads/2024/05/colors-1024x576.jpg 1024w, /wp-content/uploads/2024/05/colors-300x169.jpg 300w, /wp-content/uploads/2024/05/colors-768x432.jpg 768w, /wp-content/uploads/2024/05/colors-1536x864.jpg 1536w, /wp-content/uploads/2024/05/colors-800x450.jpg 800w, /wp-content/uploads/2024/05/colors.jpg 1920w\" sizes=\"auto, (max-width: 1024px) 100vw, 1024px\" /></figure>\n\n\n\n<div style=\"height:32px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n\n\n\n<h4 class=\"wp-block-heading\">Website Revamp</h4>\n\n\n\n<p>Our focus was to create a more efficient and secure user experience for online shopping.&nbsp; We began by crafting wireframes, offering Galeno a transparent view of the proposed website&#8217;s layout and functionality. Next, we designed and developed the website, addressing any factors hindering its optimal performance. To further enhance the user experience, we elevated the quality of product images and integrated various payment methods, streamlining the checkout process.</p>\n\n\n\n<figure class=\"wp-block-image size-large\"><img loading=\"lazy\" decoding=\"async\" width=\"1024\" height=\"576\" src=\"/wp-content/uploads/2024/05/colors-1-1024x576.jpg\" alt=\"\" class=\"wp-image-634\" srcset=\"/wp-content/uploads/2024/05/colors-1-1024x576.jpg 1024w, /wp-content/uploads/2024/05/colors-1-300x169.jpg 300w, /wp-content/uploads/2024/05/colors-1-768x432.jpg 768w, /wp-content/uploads/2024/05/colors-1-1536x864.jpg 1536w, /wp-content/uploads/2024/05/colors-1-800x450.jpg 800w, /wp-content/uploads/2024/05/colors-1.jpg 1920w\" sizes=\"auto, (max-width: 1024px) 100vw, 1024px\" /></figure>\n\n\n\n<figure class=\"wp-block-image size-large\"><img loading=\"lazy\" decoding=\"async\" width=\"1024\" height=\"576\" src=\"/wp-content/uploads/2024/05/colors-2-1024x576.jpg\" alt=\"\" class=\"wp-image-635\" srcset=\"/wp-content/uploads/2024/05/colors-2-1024x576.jpg 1024w, /wp-content/uploads/2024/05/colors-2-300x169.jpg 300w, /wp-content/uploads/2024/05/colors-2-768x432.jpg 768w, /wp-content/uploads/2024/05/colors-2-1536x864.jpg 1536w, /wp-content/uploads/2024/05/colors-2-800x450.jpg 800w, /wp-content/uploads/2024/05/colors-2.jpg 1920w\" sizes=\"auto, (max-width: 1024px) 100vw, 1024px\" /></figure>\n\n\n\n<div style=\"height:40px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n\n\n\n<h3 class=\"wp-block-heading\">The Solution</h3>\n\n\n\n<p>To address the website and branding challenges, we implemented a multi-step approach, ensuring a smooth and efficient process. First, we conducted a thorough assessment to identify key pain points. Next, working closely with the Galeno team, we designed the website using a user-centric approach. This approach ensured a seamless and optimized experience for online transactions, prioritizing user experience while developing efficient and visually appealing website designs &#8211; all within a defined timeframe.</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Galeno, a leading hygiene solutions provider in the UAE, sought to refresh its website and refine its brand identity while retaining its existing logo and core brand message. Their primary concern was the website&#8217;s cumbersome checkout process and the lack of secure payment options. With a decade of B2B expertise, Galeno desired to seamlessly expand into the B2C space by enhancing user experience while shopping via their website.</p>\n",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "class_list": [
+      "post-591",
+      "our-work",
+      "type-our-work",
+      "status-publish",
+      "hentry",
+      "entry"
+    ],
+    "acf": {
+      "metadata": {
+        "title": "Galeno Hygiene",
+        "description": "Galeno Hygiene",
+        "keywords": ""
+      },
+      "current_blog_url": "galeno-hygiene",
+      "featured_image": "/wp-content/uploads/2024/05/colors-1.jpg",
+      "banner_image": "/wp-content/uploads/2024/05/Galeno-Hygiene.jpg",
+      "about_client": {
+        "website_url": "www.galenohygiene.com",
+        "service": "Website Revamp",
+        "client": "Galeno Hygiene",
+        "date": "April 28, 2024",
+        "location": "Dubai"
+      },
+      "other_works": [
+        393,
+        592
+      ]
+    }
+  },
+  {
+    "id": 393,
+    "date": "2024-04-06T07:03:15",
+    "date_gmt": "2024-04-06T07:03:15",
+    "guid": {
+      "rendered": "https://creativate.centralcabs.in/?post_type=our-work&#038;p=393"
+    },
+    "modified": "2024-05-12T18:12:00",
+    "modified_gmt": "2024-05-12T18:12:00",
+    "slug": "travel-memories",
+    "status": "publish",
+    "type": "our-work",
+    "link": "https://creativate.centralcabs.in/our-work/travel-memories/",
+    "title": {
+      "rendered": "Travel Memories"
+    },
+    "content": {
+      "rendered": "\n<h3 class=\"wp-block-heading\">The Challenge</h3>\n\n\n\n<p>Travel Memories, a travel agency, approached us to rebrand their logo and brand identity to establish themselves as a trusted and reliable travel partner. The challenge was to create a logo and brand identity that captured the brand values and resonated with their target audience. The objective was to cut through the competitive travel and tourism market and create a memorable brand image.</p>\n\n\n\n<div style=\"height:48px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n\n\n\n<h3 class=\"wp-block-heading\">The Solution</h3>\n\n\n\n<p>Through in-depth conversations with Travel Memories, we gained a thorough insight into their core values and aspirations. We then created a new logo and brand identity that reflected these values and conveyed a sense of trust, safety and reliability to the customers. We carefully selected the brand colours and font styles, ensuring that each aspect reinforced the message of Travel Memories being a dependable travel companion. This rebranding aimed to position Travel Memories as the preferred choice for travellers seeking unforgettable travel experiences.</p>\n\n\n\n<figure class=\"wp-block-image size-large\"><img loading=\"lazy\" decoding=\"async\" width=\"1024\" height=\"576\" src=\"/wp-content/uploads/2024/05/Brand-Identity-1024x576.png\" alt=\"\" class=\"wp-image-605\" srcset=\"/wp-content/uploads/2024/05/Brand-Identity-1024x576.png 1024w, /wp-content/uploads/2024/05/Brand-Identity-300x169.png 300w, /wp-content/uploads/2024/05/Brand-Identity-768x432.png 768w, /wp-content/uploads/2024/05/Brand-Identity-1536x864.png 1536w, /wp-content/uploads/2024/05/Brand-Identity-800x450.png 800w, /wp-content/uploads/2024/05/Brand-Identity.png 1920w\" sizes=\"auto, (max-width: 1024px) 100vw, 1024px\" /></figure>\n\n\n\n<div style=\"height:32px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n\n\n\n<h3 class=\"wp-block-heading\">The Creative Process</h3>\n\n\n\n<h4 class=\"wp-block-heading\">Logo</h4>\n\n\n\n<p>The new logo mark that we designed is a flat logo design which includes two main elements:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>The location pin: It represents the many travel destinations customers can explore with Travel Memories.</li>\n\n\n\n<li>The negative space in the shape of an aeroplane: It highlights the brand&#8217;s focus on making travel easy and accessible.&nbsp;</li>\n</ul>\n\n\n\n<p>We used the golden ratio to make the logo visually striking and memorable. These elements combine to create a logo that seamlessly reflects the brand&#8217;s values and resonates with its target audience.</p>\n\n\n\n<div class=\"wp-block-columns is-layout-flex wp-container-core-columns-is-layout-1 wp-block-columns-is-layout-flex\">\n<div class=\"wp-block-column is-layout-flow wp-block-column-is-layout-flow\">\n<figure class=\"wp-block-image size-large\"><img loading=\"lazy\" decoding=\"async\" width=\"1024\" height=\"576\" src=\"/wp-content/uploads/2024/05/Logo-mark-lines-1024x576.png\" alt=\"\" class=\"wp-image-602\" srcset=\"/wp-content/uploads/2024/05/Logo-mark-lines-1024x576.png 1024w, /wp-content/uploads/2024/05/Logo-mark-lines-300x169.png 300w, /wp-content/uploads/2024/05/Logo-mark-lines-768x432.png 768w, /wp-content/uploads/2024/05/Logo-mark-lines-1536x864.png 1536w, /wp-content/uploads/2024/05/Logo-mark-lines-800x450.png 800w, /wp-content/uploads/2024/05/Logo-mark-lines.png 1920w\" sizes=\"auto, (max-width: 1024px) 100vw, 1024px\" /></figure>\n</div>\n\n\n\n<div class=\"wp-block-column is-layout-flow wp-block-column-is-layout-flow\">\n<figure class=\"wp-block-image size-large\"><img loading=\"lazy\" decoding=\"async\" width=\"1024\" height=\"576\" src=\"/wp-content/uploads/2024/05/logomark-1024x576.png\" alt=\"\" class=\"wp-image-603\" srcset=\"/wp-content/uploads/2024/05/logomark-1024x576.png 1024w, /wp-content/uploads/2024/05/logomark-300x169.png 300w, /wp-content/uploads/2024/05/logomark-768x432.png 768w, /wp-content/uploads/2024/05/logomark-1536x864.png 1536w, /wp-content/uploads/2024/05/logomark-800x450.png 800w, /wp-content/uploads/2024/05/logomark.png 1920w\" sizes=\"auto, (max-width: 1024px) 100vw, 1024px\" /></figure>\n</div>\n</div>\n\n\n\n<div style=\"height:32px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n\n\n\n<h4 class=\"wp-block-heading\">Colours</h4>\n\n\n\n<p>Travel Memories is a company with a modern and fresh aesthetic. To portray this personality and the brand values through the brand colours, we decided to use green and blue. The particular shade of green used here adds a sense of modernity and energy, while the blue reinforces the brand&#8217;s commitment to safety and trust.</p>\n\n\n\n<figure class=\"wp-block-image size-large\"><img loading=\"lazy\" decoding=\"async\" width=\"1024\" height=\"576\" src=\"/wp-content/uploads/2024/05/colors-1024x576.png\" alt=\"\" class=\"wp-image-606\" srcset=\"/wp-content/uploads/2024/05/colors-1024x576.png 1024w, /wp-content/uploads/2024/05/colors-300x169.png 300w, /wp-content/uploads/2024/05/colors-768x432.png 768w, /wp-content/uploads/2024/05/colors-1536x864.png 1536w, /wp-content/uploads/2024/05/colors-800x450.png 800w, /wp-content/uploads/2024/05/colors.png 1920w\" sizes=\"auto, (max-width: 1024px) 100vw, 1024px\" /></figure>\n\n\n\n<div style=\"height:32px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n\n\n\n<p>We also designed the use case, from business cards to tote bags, to show the multiple ways for Travel Memories as a brand to become recognizable using the brand&#8217;s collateral.</p>\n\n\n\n<figure class=\"wp-block-image size-large\"><img loading=\"lazy\" decoding=\"async\" width=\"1024\" height=\"576\" src=\"/wp-content/uploads/2024/05/usecase-tote-bags-1-1024x576.png\" alt=\"\" class=\"wp-image-608\" srcset=\"/wp-content/uploads/2024/05/usecase-tote-bags-1-1024x576.png 1024w, /wp-content/uploads/2024/05/usecase-tote-bags-1-300x169.png 300w, /wp-content/uploads/2024/05/usecase-tote-bags-1-768x432.png 768w, /wp-content/uploads/2024/05/usecase-tote-bags-1-1536x864.png 1536w, /wp-content/uploads/2024/05/usecase-tote-bags-1-800x450.png 800w, /wp-content/uploads/2024/05/usecase-tote-bags-1.png 1920w\" sizes=\"auto, (max-width: 1024px) 100vw, 1024px\" /></figure>\n\n\n\n<figure class=\"wp-block-image size-large\"><img loading=\"lazy\" decoding=\"async\" width=\"1024\" height=\"576\" src=\"/wp-content/uploads/2024/05/use-case-tshirts-1024x576.png\" alt=\"\" class=\"wp-image-609\" srcset=\"/wp-content/uploads/2024/05/use-case-tshirts-1024x576.png 1024w, /wp-content/uploads/2024/05/use-case-tshirts-300x169.png 300w, /wp-content/uploads/2024/05/use-case-tshirts-768x432.png 768w, /wp-content/uploads/2024/05/use-case-tshirts-1536x864.png 1536w, /wp-content/uploads/2024/05/use-case-tshirts-800x450.png 800w, /wp-content/uploads/2024/05/use-case-tshirts.png 1920w\" sizes=\"auto, (max-width: 1024px) 100vw, 1024px\" /></figure>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>We developed a visually stunning and user-friendly e-commerce platform for Chic Boutique, a renowned fashion retailer. The platform featured seamless product browsing, secure payment integration, and personalized recommendations, resulting in increased online sales and customer satisfaction.</p>\n",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "class_list": [
+      "post-393",
+      "our-work",
+      "type-our-work",
+      "status-publish",
+      "hentry",
+      "entry"
+    ],
+    "acf": {
+      "metadata": {
+        "title": "Travel Memories",
+        "description": "Travel Memories, a travel agency, approached us to rebrand their logo and brand identity to establish themselves as a trusted and reliable travel partner. The challenge was to create a logo and brand identity that captured the brand values and resonated with their target audience. The objective was to cut through the competitive travel and tourism market and create a memorable brand image.",
+        "keywords": ""
+      },
+      "current_blog_url": "travel-memories",
+      "featured_image": "/wp-content/uploads/2024/05/TMFeature-image.jpg",
+      "banner_image": "/wp-content/uploads/2024/05/bc9a40172807929.6485e5aa7c8e6.png",
+      "about_client": {
+        "website_url": "",
+        "service": "Logo design & Branding",
+        "client": "Travel Memories",
+        "date": "April 2, 2023",
+        "location": "Singapore"
+      },
+      "other_works": [
+        591,
+        592
+      ]
+    }
+  }
+]

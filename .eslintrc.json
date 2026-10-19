@@ -1,0 +1,4 @@
+{
+	"extends": "next/core-web-vitals",
+	"rules": { "react/no-unescaped-entities": 0 } // allow the usage of "'" -> `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`. react/no-unescaped-entities
+}

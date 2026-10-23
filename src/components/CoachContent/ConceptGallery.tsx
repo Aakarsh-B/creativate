@@ -31,7 +31,7 @@ const ConceptGallery = ({ data }: any) => {
 							<a
 								href={item.image}
 								target="_blank"
-								className="relative block w-full aspect-[2400/2300] bg-[#0f1022]">
+								className="relative block w-full aspect-[2400/1990] bg-[#0f1022]">
 								<ImageLoader
 									src={item.image}
 									fill
@@ -42,7 +42,7 @@ const ConceptGallery = ({ data }: any) => {
 							</a>
 							<div className="px-[24px] py-[24px]">
 								<p className="font-poppins text-primaryBlue font-[600] uppercase tracking-[0.1em] text-[13px] leading-[18px] mb-[8px]">
-									{item.niche}
+									Content concept · {item.niche}
 								</p>
 								<h3 className="text-primaryLight font-[500] text-[26px] leading-[32px] mb-[10px]">
 									{item.name}

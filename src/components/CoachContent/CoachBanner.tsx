@@ -1,24 +1,32 @@
 import SectionLayout from "@/templates/SectionLayout";
+import ImageLoader from "@/utils/ImageLoader";
 import Link from "next/link";
+
+// Fanned stack of sample posts: back-left, back-right, front-centre
+const CardPlacement = [
+	"left-0 top-[8%] -rotate-[8deg] z-[1]",
+	"right-0 top-[8%] rotate-[8deg] z-[1]",
+	"left-1/2 -translate-x-1/2 top-0 z-[2]",
+];
 
 const CoachBanner = ({ data }: any) => {
 	return (
 		<SectionLayout className={``}>
 			<div
-				className={`px-[20px] py-[37px] lg:px-[80px] lg:py-[70px] bg-[#191B35] rounded-[8px] overflow-hidden relative`}>
+				className={`px-[20px] pt-[37px] pb-[30px] lg:px-[64px] lg:py-[56px] bg-[#191B35] rounded-[8px] overflow-hidden relative flex flex-col lg:flex-row lg:items-center gap-[36px] lg:gap-[48px]`}>
 				<span
 					className={`absolute w-full h-[15px] top-0 right-0 left-0 bg-[linear-gradient(91.94deg,#336CFB_0%,#11C3C1_100%)]`}
 				/>
-				<div className="max-w-[820px] mx-auto lg:ml-0 text-center lg:text-left">
-					<p className="font-poppins text-primaryBlue font-[600] uppercase tracking-[0.12em] text-[14px] leading-[20px] mb-[16px]">
+				<div className="w-full lg:w-[52%] text-center lg:text-left">
+					<p className="font-poppins text-primaryBlue font-[600] uppercase tracking-[0.12em] text-[13px] leading-[18px] mb-[14px]">
 						{data?.eyebrow}
 					</p>
 					<h1
-						className={`font-[500] text-primaryLight text-[34px] leading-[40px] mb-[18px] lg:text-[52px] lg:leading-[60px]`}>
+						className={`font-[500] text-primaryLight text-[30px] leading-[36px] mb-[16px] lg:text-[40px] lg:leading-[48px]`}>
 						{data?.title}
 					</h1>
 					<p
-						className={`text-primaryLight/70 font-[400] text-[20px] leading-[26px] lg:text-[22px] lg:leading-[30px] mb-[32px]`}>
+						className={`text-primaryLight/70 font-[400] text-[18px] leading-[24px] lg:text-[20px] lg:leading-[28px] mb-[28px]`}>
 						{data?.description}
 					</p>
 					<div className="flex flex-col sm:flex-row gap-[16px] justify-center lg:justify-start">
@@ -35,6 +43,24 @@ const CoachBanner = ({ data }: any) => {
 						</Link>
 					</div>
 				</div>
+				{data?.images?.length > 0 && (
+					<div className="relative w-full max-w-[460px] lg:max-w-none lg:w-[48%] mx-auto aspect-[10/9]">
+						{data.images.slice(0, 3).map((img: any, index: number) => (
+							<div
+								key={img.src}
+								className={`absolute w-[52%] aspect-[4/5] rounded-[8px] overflow-hidden shadow-[0_24px_60px_rgba(0,0,0,0.5)] ${CardPlacement[index]}`}>
+								<ImageLoader
+									src={img.src}
+									fill
+									priority
+									sizes="(max-width: 1024px) 45vw, 300px"
+									alt={img.alt}
+									className="object-cover"
+								/>
+							</div>
+						))}
+					</div>
+				)}
 			</div>
 		</SectionLayout>
 	);

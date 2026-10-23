@@ -10,11 +10,31 @@
 			"eyebrow": "For online fitness coaches",
 			"title": "Your coaching is world-class. Your Instagram should look it.",
 			"description": "We design and write your monthly Instagram content and build your website, so you can spend your time coaching, not designing.",
-			"primary_cta": { "label": "Book a free call", "link": "https://cal.com/aakarsh-b/30min" },
-			"secondary_cta": { "label": "See pricing", "link": "#pricing" }
+			"primary_cta": {
+				"label": "Book a free call",
+				"link": "https://cal.com/aakarsh-b/30min"
+			},
+			"secondary_cta": {
+				"label": "See pricing",
+				"link": "#pricing"
+			},
+			"images": [
+				{
+					"src": "/images/coach-content/hero-ironline.jpg",
+					"alt": "Powerlifting coach post concept showing a +25kg squat PR chart"
+				},
+				{
+					"src": "/images/coach-content/hero-peak.jpg",
+					"alt": "Hybrid coach post concept showing a 19:42 5K personal best"
+				},
+				{
+					"src": "/images/coach-content/hero-bloom.jpg",
+					"alt": "Pilates studio post concept reading Strength, softly"
+				}
+			]
 		},
 		"concepts": {
-			"title": "One system per brand. Never a recoloured template.",
+			"title": "See more templates",
 			"description": "Every coach gets a visual system built around their niche: type, layout, photo style and voice. A few concept brands to show the range:",
 			"note": "Concept brands created to demonstrate our process. Not real clients.",
 			"items": [
@@ -22,26 +42,25 @@
 					"name": "Ironline Strength",
 					"niche": "Powerlifting coach",
 					"style": "Industrial training-log system: data tables, PR charts, orange-toned photography.",
-					"image": "/images/coach-content/ironline-concept.jpg"
+					"image": "/images/coach-content/ironline-grid.jpg"
 				},
 				{
 					"name": "Bloom Pilates Studio",
 					"niche": "Pilates studio",
 					"style": "Calm and editorial: serif type, arched photography, generous whitespace.",
-					"image": "/images/coach-content/bloom-concept.jpg"
+					"image": "/images/coach-content/bloom-grid.jpg"
 				},
 				{
 					"name": "Peak Hybrid Coaching",
 					"niche": "Run + lift coach",
 					"style": "Fast and sporty: wide type, slanted shapes, race-day energy.",
-					"image": "/images/coach-content/peak-concept.jpg"
+					"image": "/images/coach-content/peak-grid.jpg"
 				}
 			]
 		},
 		"pricing": {
 			"title": "Simple monthly pricing",
 			"description": "No lock-in contracts. Cancel with 30 days’ notice.",
-			"founding_note": "Founding client offer: 30% off your first 3 months for our first 3 coaches.",
 			"packages": [
 				{
 					"name": "Content Lite",
@@ -120,15 +139,15 @@
 			"title": "How it works",
 			"process_item_list": [
 				{
-					"title": "1. Free call",
+					"title": "Free call",
 					"description": "15 minutes to understand your coaching, your audience and your goals."
 				},
 				{
-					"title": "2. Brand system",
+					"title": "Brand system",
 					"description": "We build your visual system and first month’s content plan for your approval."
 				},
 				{
-					"title": "3. Monthly content",
+					"title": "Monthly content",
 					"description": "Your posts, stories and captions arrive by the 25th, ready for the month ahead."
 				}
 			]

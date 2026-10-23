@@ -1,0 +1,163 @@
+[
+	{
+		"slug": "coach-content",
+		"metadata": {
+			"title": "Instagram Content & Websites for Fitness Coaches | Creativate",
+			"description": "Done-for-you Instagram content and websites for online fitness coaches. Monthly posts and stories in your brand, written and designed for you.",
+			"keywords": "fitness coach instagram content, personal trainer social media, fitness coach website, online coach branding"
+		},
+		"banner": {
+			"eyebrow": "For online fitness coaches",
+			"title": "Your coaching is world-class. Your Instagram should look it.",
+			"description": "We design and write your monthly Instagram content and build your website, so you can spend your time coaching, not designing.",
+			"primary_cta": { "label": "Book a free call", "link": "https://cal.com/aakarsh-b/30min" },
+			"secondary_cta": { "label": "See pricing", "link": "#pricing" }
+		},
+		"concepts": {
+			"title": "One system per brand. Never a recoloured template.",
+			"description": "Every coach gets a visual system built around their niche: type, layout, photo style and voice. A few concept brands to show the range:",
+			"note": "Concept brands created to demonstrate our process. Not real clients.",
+			"items": [
+				{
+					"name": "Ironline Strength",
+					"niche": "Powerlifting coach",
+					"style": "Industrial training-log system: data tables, PR charts, orange-toned photography.",
+					"image": "/images/coach-content/ironline-concept.jpg"
+				},
+				{
+					"name": "Bloom Pilates Studio",
+					"niche": "Pilates studio",
+					"style": "Calm and editorial: serif type, arched photography, generous whitespace.",
+					"image": "/images/coach-content/bloom-concept.jpg"
+				},
+				{
+					"name": "Peak Hybrid Coaching",
+					"niche": "Run + lift coach",
+					"style": "Fast and sporty: wide type, slanted shapes, race-day energy.",
+					"image": "/images/coach-content/peak-concept.jpg"
+				}
+			]
+		},
+		"pricing": {
+			"title": "Simple monthly pricing",
+			"description": "No lock-in contracts. Cancel with 30 days’ notice.",
+			"founding_note": "Founding client offer: 30% off your first 3 months for our first 3 coaches.",
+			"packages": [
+				{
+					"name": "Content Lite",
+					"tagline": "Stay consistent without the effort",
+					"usd": 200,
+					"inr": 9999,
+					"period": "/month",
+					"features": [
+						"8 feed posts a month",
+						"4 stories a month",
+						"Captions written for you",
+						"Delivered as an editable Canva link",
+						"1 revision round per batch"
+					],
+					"highlight": false
+				},
+				{
+					"name": "Content Core",
+					"tagline": "A feed that sells your coaching",
+					"usd": 300,
+					"inr": 17999,
+					"period": "/month",
+					"features": [
+						"12 feed posts a month, including carousels",
+						"8 stories a month",
+						"Captions + monthly content plan",
+						"Custom brand system built for you",
+						"1 revision round per batch"
+					],
+					"highlight": true
+				},
+				{
+					"name": "Coach Website",
+					"tagline": "Turn followers into applications",
+					"usd": 1200,
+					"inr": 59999,
+					"prefix": "from",
+					"period": "one-time",
+					"features": [
+						"Mobile-first site built around your offer",
+						"Results, testimonials and application form",
+						"Matches your Instagram brand",
+						"Fast, SEO-ready build",
+						"30 days of support included"
+					],
+					"highlight": false
+				},
+				{
+					"name": "Care Plan",
+					"tagline": "We look after your site",
+					"usd": 60,
+					"inr": 2999,
+					"period": "/month",
+					"features": [
+						"Hosting and updates",
+						"Up to 1 hour of edits a month",
+						"Uptime and security monitoring",
+						"Priority support"
+					],
+					"highlight": false
+				}
+			]
+		},
+		"template_pack": {
+			"eyebrow": "Prefer to DIY?",
+			"title": "Fitness Coach Bold: 40 Canva templates",
+			"description": "30 posts and 10 stories for online coaches, including 2 ready-to-post carousels. Edit in Canva with a free account and post the same day.",
+			"usd": 15,
+			"inr": 999,
+			"image": "/images/coach-content/template-pack.jpg",
+			"link": "",
+			"cta_label": "Get the template pack",
+			"soon_label": "Launching soon"
+		},
+		"process": {
+			"title": "How it works",
+			"process_item_list": [
+				{
+					"title": "1. Free call",
+					"description": "15 minutes to understand your coaching, your audience and your goals."
+				},
+				{
+					"title": "2. Brand system",
+					"description": "We build your visual system and first month’s content plan for your approval."
+				},
+				{
+					"title": "3. Monthly content",
+					"description": "Your posts, stories and captions arrive by the 25th, ready for the month ahead."
+				}
+			]
+		},
+		"faq": {
+			"title": "Coach content FAQs",
+			"description": "Everything you need to know before we start working together.",
+			"question_answer_list": [
+				{
+					"question": "Do I need to post the content myself?",
+					"answer": "Yes. We deliver everything as an editable Canva link with captions, so you stay in control of your account and can post on your own schedule."
+				},
+				{
+					"question": "Will it actually look like my brand?",
+					"answer": "Every client gets a custom visual system built from their colours, photos and voice. You approve the system and every batch before anything goes out."
+				},
+				{
+					"question": "Do I need a paid Canva account?",
+					"answer": "No. Everything works with a free Canva account."
+				},
+				{
+					"question": "How do payments work?",
+					"answer": "We invoice monthly in advance in USD (or INR for clients in India). There’s no lock-in: cancel any time with 30 days’ notice."
+				},
+				{
+					"question": "Can you also build my website?",
+					"answer": "Yes. Coach websites start at $1,200 / ₹59,999 and are designed to match your Instagram brand. Add the Care Plan and we’ll look after hosting and updates."
+				}
+			]
+		}
+	}
+]

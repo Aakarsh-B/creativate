@@ -1,24 +1,48 @@
 import ImageLoader from "@/utils/ImageLoader";
+import AnimateInView from "@/templates/animateInView";
+import Link from "next/link";
 
-const BlogDetailsBanner = ({ title, bannerImage }: any) => {
+const BlogDetailsBanner = ({ title, bannerImage, date }: any) => {
 	return (
-		<div className="relative block md:h-[466px]">
-			<div className="relative pt-[36.2%] min-h-[140px] max-w-[600px] mx-auto md:min-h-auto md:max-w-full rounded-[16px] md:absolute md:h-full md:inset-0 md:w-full md:rounded-[24px] overflow-hidden imgloader z-0">
+		<div className="relative">
+			<div className="mx-auto max-w-[920px] text-center">
+				<div className="mb-[28px] flex items-center justify-center gap-[12px] text-[14px] text-primaryLight/60">
+					<Link
+						href="/our-blog"
+						className="transition-colors duration-300 hover:text-lime">
+						← Blog
+					</Link>
+					{date && (
+						<>
+							<span className="h-[4px] w-[4px] rounded-full bg-white/30" />
+							<span>
+								{new Date(date).toLocaleDateString("en-IN", {
+									day: "numeric",
+									month: "long",
+									year: "numeric",
+								})}
+							</span>
+						</>
+					)}
+				</div>
+				<AnimateInView
+					reset={false}
+					animation={"translateFromBottom"}>
+					<h1
+						className="text-[36px] leading-[1.05] font-[500] tracking-[-0.04em] text-primaryLight md:text-[56px] lg:text-[68px]"
+						dangerouslySetInnerHTML={{ __html: title }}
+					/>
+				</AnimateInView>
+			</div>
+			<div className="relative mt-[40px] aspect-[16/10] overflow-hidden rounded-[24px] bg-surface imgloader md:aspect-[16/8] lg:mt-[56px] lg:rounded-[32px]">
 				<ImageLoader
 					src={bannerImage}
 					alt={title}
 					fill
-					className={`z-[0]`}
-					style={{
-						objectFit: "cover",
-					}}
+					priority
+					sizes="(max-width: 1280px) 92vw, 1280px"
+					className="object-cover"
 				/>
-				<span className="blog-banner absolute bottom-0 left-0 w-full h-full z-[1]" />
-			</div>
-			<div className="max-w-[600px] mt-[16px] lg:mt-0 md:px-[20px] lg:px-0 mx-auto md:max-w-full xl:max-w-[1024px] md:absolute md:bottom-[40px] md:left-1/2 md:-translate-x-1/2 w-full z-[1]">
-				<h2 className="text-[#F2F0EB] text-[32px] leading-[38px] font-[500] text-center lg:text-left lg:text-[40px] lg:leading-[48px] line-clamp-4">
-					{title}
-				</h2>
 			</div>
 		</div>
 	);

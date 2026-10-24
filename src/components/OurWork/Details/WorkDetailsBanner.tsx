@@ -1,84 +1,69 @@
 import ImageLoader from "@/utils/ImageLoader";
+import AnimateInView from "@/templates/animateInView";
+import Link from "next/link";
 
-const ClientDetCard = ({ type, title }: any) => {
-	let head: any;
-	switch (type) {
-		case "service":
-			head = "Service";
-			break;
-
-		case "client":
-			head = "Client";
-			break;
-
-		case "date":
-			head = "Date";
-			break;
-
-		case "location":
-			head = "Location";
-			break;
-
-		default:
-			head = "Service";
-	}
-	return (
-		<div className="relative px-[24px] py-[12px] w-auto md:px-[30px] md:py-[20px] md:max-w-[calc(50%_-_12px)] md:w-full xl:max-w-1/4 xl:w-auto mx-auto md:mx-0 rounded-[8px] text-[#F2F0EB] inline-flex md:flex md:flex-col text-center md:text-left overflow-hidden">
-			<span className="bg-[rgba(20,_20,_22,_0.6)] absolute inset-0 w-full h-full z-0 backdrop-blur-[8px]" />
-			<h5 className="text-[16px] leading-[24px] font-[600] md:text-[18px] md:leading-[24px] md:mb-[10px] mr-[8px] md:mr-0 z-[1]">
-				{head}
-			</h5>
-			<p className="text-[18px] leading-[22px] font-[400] md:text-[20px] md:leading-[26px] z-[1]">
-				{title}
-			</p>
-		</div>
-	);
+const DetailLabels: Record<string, string> = {
+	service: "Service",
+	client: "Client",
+	date: "Date",
+	location: "Location",
 };
 
 const WorkDetailsBanner = ({ title, bannerImage, clientDetails }: any) => {
+	const details = Object.keys(DetailLabels).filter((key) => clientDetails?.[key]);
+
 	return (
-		<div className="relative block md:h-[466px]">
-			<div className="relative pt-[36.2%] min-h-[140px] max-w-[600px] mx-auto md:min-h-auto md:max-w-full rounded-[16px] md:absolute md:h-full md:inset-0 md:w-full md:rounded-[24px] overflow-hidden imgloader z-0">
+		<div className="relative">
+			<Link
+				href="/our-work"
+				className="mb-[28px] inline-flex items-center gap-[8px] text-[14px] text-primaryLight/60 transition-colors duration-300 hover:text-lime">
+				← All work
+			</Link>
+			<AnimateInView
+				reset={false}
+				animation={"translateFromBottom"}>
+				<h1
+					className="max-w-[1100px] text-[44px] leading-[0.98] font-[500] tracking-[-0.045em] text-primaryLight md:text-[72px] lg:text-[96px]"
+					dangerouslySetInnerHTML={{ __html: title }}
+				/>
+			</AnimateInView>
+
+			{details.length > 0 && (
+				<dl className="mt-[40px] grid grid-cols-2 gap-x-[16px] gap-y-[24px] border-t border-white/10 pt-[24px] md:grid-cols-4">
+					{details.map((key) => (
+						<div key={key}>
+							<dt className="mb-[6px] text-[12px] uppercase tracking-[0.14em] text-muted">
+								{DetailLabels[key]}
+							</dt>
+							<dd className="text-[16px] leading-[1.4] text-primaryLight lg:text-[18px]">
+								{clientDetails[key]}
+							</dd>
+						</div>
+					))}
+				</dl>
+			)}
+
+			<div className="relative mt-[40px] aspect-[16/10] overflow-hidden rounded-[24px] bg-surface imgloader md:aspect-[16/8] lg:mt-[56px] lg:rounded-[32px]">
 				<ImageLoader
 					src={bannerImage}
 					alt={title}
 					fill
-					style={{
-						objectFit: "cover",
-					}}
+					priority
+					sizes="(max-width: 1280px) 92vw, 1280px"
+					className="object-cover"
 				/>
 			</div>
-			<div className="max-w-[600px] mt-[16px] lg:mt-0 md:px-[20px] lg:px-0 mx-auto md:max-w-full xl:max-w-[1024px] md:absolute md:-bottom-[20%] xl:bottom-[-50px] md:left-1/2 md:-translate-x-1/2 w-full">
-				<h2 className="text-[#F2F0EB] text-[32px] leading-[38px] font-[500] text-center lg:text-left lg:text-[40px] lg:leading-[48px] line-clamp-4">
-					{title}
-				</h2>
-				<div className="flex flex-col md:flex-row justify-start flex-wrap gap-[16px] md:gap-[24px] mt-[16px] md:mt-[24px] lg:mt-[32px]">
-					{clientDetails?.service && (
-						<ClientDetCard
-							type={"service"}
-							title={clientDetails?.service}
-						/>
-					)}
-					{clientDetails?.client && (
-						<ClientDetCard
-							type={"client"}
-							title={clientDetails?.client}
-						/>
-					)}
-					{clientDetails?.date && (
-						<ClientDetCard
-							type={"date"}
-							title={clientDetails?.date}
-						/>
-					)}
-					{clientDetails?.location && (
-						<ClientDetCard
-							type={"location"}
-							title={clientDetails?.location}
-						/>
-					)}
+
+			{clientDetails?.website_url && (
+				<div className="mt-[20px] flex justify-end">
+					<Link
+						href={clientDetails.website_url}
+						target="_blank"
+						className="inline-flex h-[48px] items-center gap-[8px] rounded-full border border-white/15 px-[20px] text-[15px] text-primaryLight transition-colors duration-300 hover:border-lime hover:text-lime">
+						Visit live site ↗
+					</Link>
 				</div>
-			</div>
+			)}
 		</div>
 	);
 };

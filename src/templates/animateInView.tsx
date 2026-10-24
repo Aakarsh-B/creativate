@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, useReducedMotion } from "framer-motion";
 
 interface AnimateInViewProps {
 	children: React.ReactNode;
@@ -26,6 +26,7 @@ const AnimateInView: React.FC<AnimateInViewProps> = ({
 }) => {
 	const ref = useRef(null);
 	const isInView = useInView(ref, { once: !reset, amount: 0.15 });
+	const reduceMotion = useReducedMotion();
 
 	// ANIMATION TYPES
 	const spring = {
@@ -83,8 +84,8 @@ const AnimateInView: React.FC<AnimateInViewProps> = ({
 		<motion.div
 			ref={ref}
 			className={className ? className : ""}
-			initial={initial}
-			animate={isInView ? animate : initial}
+			initial={reduceMotion ? false : initial}
+			animate={reduceMotion || isInView ? animate : initial}
 			transition={spring}>
 			{children}
 		</motion.div>

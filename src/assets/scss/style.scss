@@ -10,6 +10,9 @@ body {
 	background: var(--primaryDark);
 	color: var(--light);
 	font-feature-settings: "ss01", "cv11";
+	// Decorative glows may extend past the viewport; never allow sideways scroll.
+	// "clip" (unlike "hidden") keeps position: sticky working.
+	overflow-x: clip;
 }
 
 .h1,
@@ -132,92 +135,124 @@ h6,
 	}
 }
 
+// Long-form rich text from the CMS (blog posts, case studies, legal pages)
 .blog-details {
-	color: #f2f0eb;
+	color: rgba(242, 240, 235, 0.78);
 	text-align: left;
+	font-size: 18px;
+	line-height: 1.7;
 
+	h2,
+	h3,
+	h4,
+	h5 {
+		color: #f2f0eb;
+		font-weight: 500;
+		letter-spacing: -0.025em;
+		line-height: 1.15;
+		margin: 56px 0 18px;
+	}
+	h2 {
+		font-size: 40px;
+	}
 	h3 {
 		font-size: 32px;
-		font-weight: 500;
-		line-height: 38px;
-		margin-bottom: 24px;
 	}
 	h4 {
-		font-size: 26px;
-		font-weight: 500;
-		line-height: 32px;
-		margin-bottom: 24px;
+		font-size: 24px;
 	}
 	h5 {
-		font-size: 22px;
-		font-weight: 500;
-		line-height: 28px;
-		margin-bottom: 24px;
+		font-size: 20px;
+	}
+	> :first-child {
+		margin-top: 0;
 	}
 	p,
 	li {
-		font-size: 20px;
-		font-weight: 400;
-		line-height: 24px;
-		margin-bottom: 24px;
+		margin-bottom: 20px;
 	}
 	li {
-		margin-bottom: 8px;
+		margin-bottom: 10px;
+		padding-left: 4px;
+	}
+	strong {
+		color: #f2f0eb;
+		font-weight: 600;
+	}
+	ul,
+	ol {
+		margin: 0 0 24px 22px;
 	}
 	ul {
-		margin-bottom: 24px;
 		list-style-type: disc;
-		margin-left: 40px;
+	}
+	ol {
+		list-style-type: decimal;
+	}
+	li::marker {
+		color: #d4ff3a;
+	}
+	blockquote {
+		border-left: 2px solid #d4ff3a;
+		padding-left: 20px;
+		margin: 32px 0;
+		font-size: 22px;
+		color: #f2f0eb;
 	}
 	img {
-		margin-bottom: 64px;
-		border-radius: 12px;
+		margin: 40px 0;
+		border-radius: 20px;
 		overflow: hidden;
+		max-width: 100%;
+		height: auto;
+	}
+	figure {
+		margin: 40px 0;
+		img {
+			margin: 0;
+		}
 	}
 	.wp-block-columns-is-layout-flex {
 		display: flex;
+		gap: 16px;
 	}
 	a {
 		color: #d4ff3a;
 		text-decoration: underline;
-		font-weight: 400;
-		transition: all 0.3s ease-in-out;
+		text-underline-offset: 3px;
+		transition: opacity 0.3s ease-in-out;
 		&:hover {
-			font-weight: 500;
+			opacity: 0.7;
 		}
 	}
 	p:last-child {
 		margin-bottom: 0;
 	}
 	@media screen and (max-width: 767.98px) {
+		font-size: 17px;
+		h2 {
+			font-size: 30px;
+		}
 		h3 {
-			font-size: 24px;
-			line-height: 28px;
-			margin-bottom: 12px;
+			font-size: 26px;
 		}
 		h4 {
-			font-size: 20px;
-			line-height: 26px;
-			margin-bottom: 12px;
+			font-size: 21px;
 		}
 		h5 {
 			font-size: 18px;
-			line-height: 24px;
-			margin-bottom: 12px;
 		}
-		p {
-			font-size: 20px;
-			line-height: 24px;
-			margin-bottom: 12px;
+		h2,
+		h3,
+		h4,
+		h5 {
+			margin-top: 40px;
 		}
-		ul {
-			margin-bottom: 12px;
-			margin-left: 25px;
-		}
-		img {
+		img,
+		figure {
 			width: 100%;
-			margin-bottom: 24px;
-			border-radius: 8px;
+			margin: 28px 0;
+			border-radius: 14px;
 		}
 		.wp-block-columns-is-layout-flex {
 			flex-direction: column;

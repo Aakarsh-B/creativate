@@ -9,7 +9,7 @@ interface ProcessItem {
 	description: string;
 }
 
-const StepProcess = ({ data, sectionId }: any) => {
+const StepProcess = ({ data, sectionId, labelIndex }: any) => {
 	const processItems: ProcessItem[] = Object.values(data?.process_item_list ?? {});
 
 	return (
@@ -22,7 +22,7 @@ const StepProcess = ({ data, sectionId }: any) => {
 			)}
 			<SectionLayout>
 				<div className="mb-[48px] flex flex-col items-center gap-[20px] lg:mb-[72px] lg:items-start">
-					<SectionLabel index="03">How we work</SectionLabel>
+					<SectionLabel index={labelIndex}>How we work</SectionLabel>
 					<SectionTitle className={`text-primaryLight max-w-[760px]`}>
 						{data?.title}
 					</SectionTitle>

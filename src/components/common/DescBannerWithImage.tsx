@@ -6,7 +6,7 @@ import AccentText from "@/utils/accentText";
 const DescBannerWithImage = ({ data }: any) => {
 	return (
 		<SectionLayout className="relative">
-			<div className="pointer-events-none absolute -top-[200px] left-[10%] h-[400px] w-[600px] rounded-full bg-primaryBlue/20 blur-[140px]" />
+			<div className="pointer-events-none absolute -top-[200px] left-[10%] h-[400px] w-[min(600px,80vw)] rounded-full bg-primaryBlue/20 blur-[140px]" />
 			<div className="relative grid grid-cols-1 gap-[24px] border-b border-white/10 pb-[40px] lg:grid-cols-12 lg:items-end lg:pb-[64px]">
 				<AnimateInView
 					reset={false}

@@ -47,7 +47,7 @@ const ServicesList = ({ data, sectionId }: any) => {
 									type="button"
 									onClick={() => setOpen(isOpen ? -1 : index)}
 									aria-expanded={isOpen}
-									className="grid w-full grid-cols-[44px_1fr_auto] items-center gap-[12px] py-[24px] text-left md:grid-cols-[80px_1fr_1fr_auto] md:gap-[24px] lg:py-[36px]">
+									className="grid w-full grid-cols-[44px_1fr_auto] items-center gap-[12px] py-[24px] text-left md:grid-cols-[48px_1fr_1fr_auto] md:gap-[20px] lg:grid-cols-[80px_1fr_1fr_auto] lg:gap-[24px] lg:py-[36px]">
 									<span className="text-[14px] font-[500] text-muted tabular-nums">
 										0{index + 1}
 									</span>

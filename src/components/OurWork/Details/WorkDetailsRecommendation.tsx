@@ -3,11 +3,11 @@ import WorkItem from "../WorkItem";
 
 const WorkDetailsRecommendation = ({ sectionTitle, data }: any) => {
 	return (
-		<div className="pt-[50px] md:pt-[100px]">
-			<h3 className="text-[32px] leading-[38px] font-[500] text-center text-[#F2F0EB] mb-[32px] lg:mb-0 lg:text-[40px] lg:leading-[48px]">
+		<div className="mt-[80px] border-t border-white/10 pt-[56px] md:mt-[120px] md:pt-[80px]">
+			<h2 className="mb-[32px] text-center text-[36px] leading-[1.05] font-[500] tracking-[-0.035em] text-primaryLight md:text-left lg:mb-[48px] lg:text-[52px]">
 				{sectionTitle}
-			</h3>
-			<div className="md:flex md:items-start md:justify-start md:flex-wrap">
+			</h2>
+			<div className="grid grid-cols-1 gap-x-[16px] gap-y-[48px] md:grid-cols-2">
 				{data?.map((item: any, index: number) => {
 					return (
 						<React.Fragment key={index}>

@@ -1,62 +1,57 @@
 import SectionLayout from "@/templates/SectionLayout";
 import SectionTitle from "@/components/common/SectionTitle";
+import SectionLabel from "@/components/common/SectionLabel";
 import ImageLoader from "@/utils/ImageLoader";
-
-const CardGradient = [
-	"bg-[linear-gradient(91.94deg,#336CFB_0%,#11C3C1_100%)]",
-	"bg-[linear-gradient(91.94deg,#456FF1_0%,#EA88CE_100%)]",
-	"bg-[linear-gradient(91.94deg,#336CFB_0%,#11C3C1_100%)]",
-];
 
 const ConceptGallery = ({ data }: any) => {
 	return (
-		<section className="py-[50px] lg:py-[100px] bg-primaryDark relative">
-			<SectionLayout className={``}>
-				<div className="max-w-[760px] mx-auto lg:mx-0 mb-[30px] lg:mb-[50px]">
-					<SectionTitle className={`text-primaryLight mb-[16px]`}>
-						{data?.title}
-					</SectionTitle>
-					<p className="text-[20px] leading-[26px] text-center lg:text-left text-primaryLight opacity-50">
+		<section className="relative bg-primaryDark py-[80px] lg:py-[140px]">
+			<SectionLayout>
+				<div className="mb-[40px] grid grid-cols-1 gap-[20px] lg:mb-[64px] lg:grid-cols-12 lg:items-end">
+					<div className="flex flex-col items-center gap-[20px] lg:col-span-7 lg:items-start">
+						<SectionLabel>Concepts</SectionLabel>
+						<SectionTitle className="text-primaryLight">{data?.title}</SectionTitle>
+					</div>
+					<p className="text-center text-[17px] leading-[1.55] text-primaryLight/60 lg:col-span-5 lg:text-left">
 						{data?.description}
 					</p>
 				</div>
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[24px]">
-					{data?.items?.map((item: any, index: number) => (
+				<div className="grid grid-cols-1 gap-[16px] md:grid-cols-2 lg:grid-cols-3">
+					{data?.items?.map((item: any) => (
 						<article
 							key={item.name}
-							className="bg-[#141416] rounded-[8px] overflow-hidden relative flex flex-col">
-							<span
-								className={`absolute w-full h-[10px] top-0 right-0 left-0 z-[2] ${CardGradient[index % CardGradient.length]}`}
-							/>
+							className="group flex flex-col overflow-hidden rounded-[24px] border border-white/[0.08] bg-surface">
 							<a
 								href={item.image}
 								target="_blank"
-								className="relative block w-full aspect-[2400/1990] bg-[#0f1022]">
+								className="relative block aspect-[2400/1990] w-full overflow-hidden bg-surfaceRaised">
 								<ImageLoader
 									src={item.image}
 									fill
-									sizes="(max-width: 768px) 88vw, (max-width: 1280px) 44vw, 420px"
+									sizes="(max-width: 768px) 92vw, (max-width: 1280px) 46vw, 420px"
 									alt={`${item.name}: content concept for a ${item.niche.toLowerCase()}`}
-									className="object-cover"
+									className="object-cover transition-transform duration-[1.2s] ease-expo group-hover:scale-[1.04]"
 								/>
 							</a>
-							<div className="px-[24px] py-[24px]">
-								<p className="font-poppins text-primaryBlue font-[600] uppercase tracking-[0.1em] text-[13px] leading-[18px] mb-[8px]">
-									Content concept · {item.niche}
+							<div className="p-[24px] lg:p-[28px]">
+								<p className="mb-[10px] text-[12px] font-[500] uppercase tracking-[0.14em] text-lime">
+									{item.niche}
 								</p>
-								<h3 className="text-primaryLight font-[500] text-[26px] leading-[32px] mb-[10px]">
+								<h3 className="mb-[8px] text-[24px] leading-[1.15] font-[500] tracking-[-0.025em] text-primaryLight lg:text-[26px]">
 									{item.name}
 								</h3>
-								<p className="text-primaryLight/60 text-[18px] leading-[24px]">
+								<p className="text-[15px] leading-[1.5] text-primaryLight/55">
 									{item.style}
 								</p>
 							</div>
 						</article>
 					))}
 				</div>
-				<p className="text-primaryLight/40 text-[15px] leading-[20px] mt-[20px] text-center lg:text-left">
-					{data?.note}
-				</p>
+				{data?.note && (
+					<p className="mt-[20px] text-center text-[14px] leading-[20px] text-primaryLight/40 lg:text-left">
+						{data?.note}
+					</p>
+				)}
 			</SectionLayout>
 		</section>
 	);

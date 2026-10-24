@@ -26,8 +26,8 @@ const OurWork = async () => {
 
 	return (
 		<>
-			<div className="pt-[160px] bg-primaryDark">
-				<DescBannerWithImage data={data?.banner} />\
+			<div className="pt-[120px] lg:pt-[180px] bg-primaryDark">
+				<DescBannerWithImage data={data?.banner} />
 				<BookConsultation data={data?.book_consultation_form} />
 			</div>
 		</>

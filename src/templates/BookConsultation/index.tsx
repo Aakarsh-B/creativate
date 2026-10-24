@@ -5,7 +5,6 @@ import React, { useState, useEffect, useCallback } from "react";
 import Input from "@/components/Form/Input";
 import { FormUtils } from "@/utils/baseUtils";
 import { useForm } from "@formspree/react";
-import Styles from "./bookConsultation.module.scss";
 
 const formData = {
 	form: {
@@ -236,10 +235,10 @@ function BookConsultation(props: any) {
 
 	return (
 		<SectionLayout>
-			<div className="md:flex md:justify-start md:flex-wrap py-[32px] md:pt-[60px] md:pb-[100px]">
-				<div className="max-w-[800px] mx-auto">
+			<div className="py-[48px] md:pt-[72px] md:pb-[140px]">
+				<div className="mx-auto max-w-[760px] rounded-[28px] border border-white/[0.08] bg-surface p-[20px] sm:p-[32px] lg:p-[48px]">
 					{state.succeeded ? (
-						<p className="p-[20px_15px] rounded-[6px] bg-primaryBlue text-primaryDark text-[20px] leading-[24px] font-bold text-center block mt-[40px]">
+						<p className="block rounded-[16px] bg-lime p-[20px] text-center text-[18px] leading-[24px] font-[600] text-primaryDark">
 							Our team will contact you soon.
 						</p>
 					) : (
@@ -251,12 +250,12 @@ function BookConsultation(props: any) {
 								handleSubmit();
 							}}>
 							<div className="flex flex-col md:flex-row flex-wrap">
-								<div className="relative w-full h-full md:max-w-[100%] mb-[50px]">
+								<div className="relative w-full h-full md:max-w-[100%] mb-[40px]">
 									<p
-										className={`text-[18px] sm:text-[20px] leading-[30px] text-center sm:text-left ${Styles.title} mb-[25px]`}>
+										className={`text-[13px] font-[500] uppercase tracking-[0.14em] text-lime text-center sm:text-left mb-[16px]`}>
 										1. What can we help you with ?
 									</p>
-									<div className="grid sm:grid-cols-2 gap-[20px] sm:gap-[24px]">
+									<div className="grid sm:grid-cols-2 gap-[10px]">
 										{props?.data?.service_provided?.map(
 											(item: any, i: any) => (
 												<div
@@ -264,12 +263,12 @@ function BookConsultation(props: any) {
 													onClick={() =>
 														handleClick(item.value)
 													}
-													className={`cursor-pointer p-[16px] sm:p-[20px] rounded-[8px] w-full h-full text-[20px] leading-[24px] text-[#F2F0EB] text-center font-[400] transition-all duration-[0.2s] ease-in ${
+													className={`cursor-pointer select-none px-[20px] py-[16px] rounded-full border w-full h-full text-[15px] leading-[22px] text-center font-[500] transition-all duration-[0.2s] ease-in ${
 														activeItems.includes(
 															item.value
 														)
-															? "bg-primaryBlue"
-															: "bg-[#1C1C1F]"
+															? "bg-lime border-lime text-primaryDark"
+															: "bg-primaryDark/60 border-white/[0.08] text-primaryLight/80 hover:border-white/25"
 													}`}>
 													{item.name}
 												</div>
@@ -279,7 +278,7 @@ function BookConsultation(props: any) {
 								</div>
 								<div className="relative w-full h-full md:max-w-[100%] mb-[30px]">
 									<p
-										className={`text-[18px] sm:text-[20px] leading-[30px] text-center sm:text-left ${Styles.title} mb-[25px]`}>
+										className={`text-[13px] font-[500] uppercase tracking-[0.14em] text-lime text-center sm:text-left mb-[16px]`}>
 										2. About Your Project
 									</p>
 									<Input
@@ -294,7 +293,7 @@ function BookConsultation(props: any) {
 										options={props?.data?.budget_options}
 										required={false}
 										addPlaceHolder={true}
-										className="w-full lg:max-h-[64px] transition-all duration-300 ease-in-out relative mb-[20px] md:mb-[24px]"
+										className="w-full transition-all duration-300 ease-in-out relative mb-[24px]"
 										inputClassName=""
 									/>
 									<Input
@@ -318,7 +317,7 @@ function BookConsultation(props: any) {
 
 								<div className="relative w-full h-full md:max-w-[100%] mb-[30px]">
 									<p
-										className={`text-[18px] sm:text-[20px] leading-[30px] text-center sm:text-left ${Styles.title} mb-[25px]`}>
+										className={`text-[13px] font-[500] uppercase tracking-[0.14em] text-lime text-center sm:text-left mb-[16px]`}>
 										3. About You
 									</p>
 									<Input
@@ -332,7 +331,7 @@ function BookConsultation(props: any) {
 										data={formData.form.name}
 										required={false}
 										addPlaceHolder={true}
-										className="w-full lg:max-h-[64px] transition-all duration-300 ease-in-out relative mb-[20px] md:mb-[24px]"
+										className="w-full transition-all duration-300 ease-in-out relative mb-[24px]"
 										inputClassName=""
 									/>
 
@@ -347,7 +346,7 @@ function BookConsultation(props: any) {
 										data={formData.form.email}
 										required={false}
 										addPlaceHolder={true}
-										className="w-full lg:max-h-[64px] transition-all duration-300 ease-in-out relative mb-[20px] md:mb-[24px]"
+										className="w-full transition-all duration-300 ease-in-out relative mb-[24px]"
 										inputClassName=""
 									/>
 
@@ -364,7 +363,7 @@ function BookConsultation(props: any) {
 										data={formData.form.phone_number}
 										required={false}
 										addPlaceHolder={true}
-										className="w-full lg:max-h-[64px] transition-all duration-300 ease-in-out relative mb-[20px] md:mb-[24px]"
+										className="w-full transition-all duration-300 ease-in-out relative mb-[24px]"
 										inputClassName=""
 									/>
 
@@ -381,7 +380,7 @@ function BookConsultation(props: any) {
 										data={formData.form.bussiness_name}
 										required={false}
 										addPlaceHolder={true}
-										className="w-full lg:max-h-[64px] transition-all duration-300 ease-in-out relative mb-[20px] md:mb-[24px]"
+										className="w-full transition-all duration-300 ease-in-out relative mb-[24px]"
 										inputClassName=""
 									/>
 
@@ -396,7 +395,7 @@ function BookConsultation(props: any) {
 										data={formData.form.website}
 										required={false}
 										addPlaceHolder={true}
-										className="w-full lg:max-h-[64px] transition-all duration-300 ease-in-out relative mb-[20px] md:mb-[24px]"
+										className="w-full transition-all duration-300 ease-in-out relative mb-[24px]"
 										inputClassName=""
 									/>
 									<div className="flex w-full">
@@ -406,9 +405,9 @@ function BookConsultation(props: any) {
 												checked={isTermsChecked}
 												name="accepted_terms"
 												onChange={handleCheckboxChange}
-												className="peer cursor-pointer appearance-none relative h-[24px] w-[24px] bg-[#1C1C1F] border border-[#1C1C1F] transition-all checked:border-primaryBlue checked:bg-primaryBlue rounded-[6px]"
+												className="peer cursor-pointer appearance-none relative h-[24px] w-[24px] bg-[#1C1C1F] border border-[#1C1C1F] transition-all checked:border-lime checked:bg-lime rounded-[6px]"
 											/>
-											<div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white opacity-0 transition-opacity peer-checked:opacity-100">
+											<div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-primaryDark opacity-0 transition-opacity peer-checked:opacity-100">
 												<svg
 													xmlns="http://www.w3.org/2000/svg"
 													className="h-3.5 w-3.5"
@@ -423,7 +422,7 @@ function BookConsultation(props: any) {
 												</svg>
 											</div>
 										</label>
-										<p className="text-[14px] leading-[16px] text-left text-[#f4f4f4]">
+										<p className="text-[13px] leading-[1.5] text-left text-primaryLight/55">
 											We're all about respecting your
 											privacy like it's VIP status! Your
 											personal info? It's strictly for
@@ -436,7 +435,7 @@ function BookConsultation(props: any) {
 											spamming - pinky swear!). Check out
 											the{" "}
 											<a
-												className="text-primaryBlue underline"
+												className="text-lime underline"
 												href="/privacy-policy">
 												Privacy Policy
 											</a>{" "}
@@ -447,13 +446,13 @@ function BookConsultation(props: any) {
 							</div>
 							<div className="flex items-center">
 								<button
-									className={`group cursor-pointer tracking-wide bg-primaryBlue border-[2px] border-solid border-primaryBlue hover:opacity-75 flex items-center justify-center rounded-[8px] text-primaryLight text-center px-[10px] text-[16px] leading-[22px] xl:px-[20px] xl:text-[20px] xl:leading-[24px]  w-full h-[50px] xl:h-[65px] p-[18px] cursor-pointer transition-all duration-300 ease-in-out capitalize ${
+									className={`inline-flex h-[56px] w-full items-center justify-center gap-[10px] rounded-full bg-lime text-[16px] font-[600] text-primaryDark transition-colors duration-300 hover:bg-primaryLight ${
 										isSubmitting
-											? "pointer-events-none"
+											? "pointer-events-none opacity-60"
 											: ""
 									}`}
 									data-target="free-consultation">
-									<span className="shrink-0">Send</span>
+									<span className="shrink-0">{isSubmitting ? "Sending…" : "Send enquiry ↗"}</span>
 								</button>
 								{/* {(loader) && (
 								<div className="relative bg-[#23282d] ml-[25px] opacity-[0.75] w-[24px] h-[24px] border-none rounded-[100%] p-0 before:content-[''] before:absolute before:bg-[#fbfbfc] before:top-[4px] before:left-[4px] before:w-[6px] before:h-[6px] before:rounded-[100%] before:animate-spin before:animate-[spin_1000ms_linear_infinite] before:origin-[8px_8px]"></div>
@@ -461,7 +460,7 @@ function BookConsultation(props: any) {
 							</div>
 							{responseMsg.show && (
 								<p
-									className={`border-[2px] mx-[10px] mt-[30px] mb-[15px] px-[15px] py-[5px] ${
+									className={`mt-[24px] rounded-[16px] border px-[16px] py-[12px] text-[15px] ${
 										responseMsg.status == "success"
 											? "border-[#46b450]"
 											: "border-[#f02525]"

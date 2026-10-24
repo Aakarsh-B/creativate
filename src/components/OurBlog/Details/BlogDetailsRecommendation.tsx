@@ -4,11 +4,11 @@ import Link from "next/link";
 
 const BlogDetailsRecommendation = ({ sectionTitle, data }: any) => {
 	return (
-		<div className="pt-[50px] md:pt-[100px]">
-			<h3 className="text-[32px] leading-[38px] font-[500] text-center text-[#F2F0EB] mb-[32px] lg:mb-0 lg:text-[40px] lg:leading-[48px]">
+		<div className="mt-[80px] border-t border-white/10 pt-[56px] md:mt-[120px] md:pt-[80px]">
+			<h2 className="mb-[32px] text-center text-[36px] leading-[1.05] font-[500] tracking-[-0.035em] text-primaryLight md:text-left lg:mb-[48px] lg:text-[52px]">
 				{sectionTitle}
-			</h3>
-			<div className="md:flex md:items-start md:justify-start md:flex-wrap">
+			</h2>
+			<div className="grid grid-cols-1 gap-x-[16px] gap-y-[48px] md:grid-cols-2">
 				{data?.map((item: any, index: number) => {
 					return (
 						<React.Fragment key={index}>
@@ -16,6 +16,7 @@ const BlogDetailsRecommendation = ({ sectionTitle, data }: any) => {
 								featImage={item?.acf?.featured_image}
 								blogLink={item?.acf?.current_blog_url || item?.slug}
 								title={item?.title?.rendered}
+								date={item?.date}
 								className={``}
 							/>
 						</React.Fragment>
@@ -25,10 +26,8 @@ const BlogDetailsRecommendation = ({ sectionTitle, data }: any) => {
 			<div className="relative block text-center">
 				<Link
 					href={`/our-blog`}
-					className="border-[#F2F0EB] border-solid border-[1px] rounded-[8px] py-[16px] px-[32px] block sm:inline-block mt-[30px] md:mt-0 opacity-100 hover:opacity-60 transition-all duration-300 ease-in-out">
-					<span className="text-[24px] leading-[30px] font-[400] text-[#F2F0EB]">
-						View all blogs
-					</span>
+					className="mt-[48px] inline-flex h-[52px] items-center justify-center rounded-full border border-white/15 px-[26px] text-[15px] font-[500] text-primaryLight transition-colors duration-300 hover:border-white/40 hover:bg-white/[0.06]">
+					View all posts
 				</Link>
 			</div>
 		</div>

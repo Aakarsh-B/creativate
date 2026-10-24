@@ -59,8 +59,8 @@ const CoachPricing = ({ pricing, templatePack, bookingLink }: any) => {
 					</p>
 				)}
 
-				<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-[24px]">
-					{pricing?.packages?.map((pkg: any) => (
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[24px]">
+					{pricing?.packages?.filter((pkg: any) => !pkg.addon).map((pkg: any) => (
 						<article
 							key={pkg.name}
 							className={`relative flex flex-col rounded-[8px] overflow-hidden px-[24px] pt-[40px] pb-[28px] ${
@@ -120,6 +120,57 @@ const CoachPricing = ({ pricing, templatePack, bookingLink }: any) => {
 						</article>
 					))}
 				</div>
+
+				{pricing?.packages
+					?.filter((pkg: any) => pkg.addon)
+					.map((pkg: any) => (
+						<article
+							key={pkg.name}
+							className="mt-[24px] relative rounded-[8px] overflow-hidden bg-[#191B35] px-[24px] pt-[36px] pb-[28px] lg:px-[40px] lg:py-[32px] flex flex-col lg:flex-row lg:items-center gap-[20px] lg:gap-[40px]">
+							<span className="absolute w-full h-[10px] top-0 right-0 left-0 bg-[linear-gradient(91.94deg,#456FF1_0%,#EA88CE_100%)]" />
+							<div className="lg:w-[30%] shrink-0">
+								<p className="font-poppins text-primaryBlue font-[600] uppercase tracking-[0.12em] text-[13px] leading-[18px] mb-[8px]">
+									Add-on
+								</p>
+								<h3 className="text-primaryLight font-[500] text-[26px] leading-[32px] mb-[6px]">
+									{pkg.name}
+								</h3>
+								<p className="text-primaryLight/60 text-[17px] leading-[22px]">
+									{pkg.tagline}
+								</p>
+							</div>
+							<ul className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-x-[24px]">
+								{pkg.features?.map((f: string) => (
+									<li
+										key={f}
+										className="flex gap-[10px] text-primaryLight/85 text-[17px] leading-[22px] py-[8px]">
+										<span
+											aria-hidden
+											className="text-[#11C3C1] shrink-0">
+											✓
+										</span>
+										{f}
+									</li>
+								))}
+							</ul>
+							<div className="shrink-0 flex flex-col sm:flex-row lg:flex-col items-start sm:items-center lg:items-end gap-[14px]">
+								<p className="text-primaryLight">
+									<span className="font-poppins font-[600] text-[34px] leading-[40px]">
+										{formatPrice(pkg[currency], currency)}
+									</span>
+									<span className="text-[16px] text-primaryLight/60 ml-[6px]">
+										{pkg.period}
+									</span>
+								</p>
+								<Link
+									href={bookingLink}
+									target="_blank"
+									className="flex items-center justify-center rounded-[8px] text-[18px] leading-[22px] h-[48px] px-[24px] border-[2px] border-solid border-primaryLight/40 text-primaryLight hover:border-primaryLight transition-all duration-300 ease-in-out">
+									Add to your website
+								</Link>
+							</div>
+						</article>
+					))}
 
 				{templatePack && (
 					<div className="mt-[50px] lg:mt-[80px] relative flex flex-col lg:flex-row lg:items-center gap-[28px] lg:gap-[56px]">

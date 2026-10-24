@@ -110,7 +110,7 @@
 				},
 				{
 					"name": "Care Plan",
-					"tagline": "We look after your site",
+					"tagline": "Keep your website fast, secure and up to date",
 					"usd": 60,
 					"inr": 2999,
 					"period": "/month",
@@ -120,7 +120,8 @@
 						"Uptime and security monitoring",
 						"Priority support"
 					],
-					"highlight": false
+					"highlight": false,
+					"addon": true
 				}
 			]
 		},

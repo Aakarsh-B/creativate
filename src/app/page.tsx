@@ -42,7 +42,6 @@ export default async function Home() {
 			/>
 			<StepProcess
 				data={data?.our_3_step_process}
-				labelIndex="03"
 			/>
 			<CustomerStories
 				data={data?.client_feedback}

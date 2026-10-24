@@ -33,9 +33,6 @@ const Footer = async () => {
 
 				{/* Closing CTA */}
 				<SectionLayout className="relative pt-[72px] pb-[56px] lg:pt-[120px] lg:pb-[80px]">
-					<p className="mb-[20px] text-center text-[13px] uppercase tracking-[0.14em] text-primaryLight/70 lg:text-left">
-						Have a project in mind?
-					</p>
 					<div className="flex flex-col items-center gap-[32px] lg:flex-row lg:items-end lg:justify-between">
 						<h2 className="max-w-[900px] text-center text-[44px] leading-[0.98] font-[500] tracking-[-0.045em] text-primaryLight md:text-[72px] lg:text-left lg:text-[96px]">
 							Let’s build something <span className="accent">bold</span>.

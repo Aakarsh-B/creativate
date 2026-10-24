@@ -1,7 +1,6 @@
 import SectionLayout from "@/templates/SectionLayout";
 import React from "react";
 import SectionTitle from "./common/SectionTitle";
-import SectionLabel from "./common/SectionLabel";
 import Link from "next/link";
 import CustomerStoryCard from "./common/CustomerStoryCard";
 
@@ -27,13 +26,6 @@ const CustomerStories = ({ data, sectionId }: any) => {
 			<SectionLayout>
 				<div className="mb-[48px] grid grid-cols-1 gap-[24px] lg:mb-[64px] lg:grid-cols-12 lg:items-end">
 					<div className="lg:col-span-7">
-						<div className="mb-[20px] flex justify-center lg:justify-start">
-							<SectionLabel
-								index="04"
-								className="!text-primaryDark/50 [&>span:nth-child(2)]:!text-primaryDark/30">
-								Client love
-							</SectionLabel>
-						</div>
 						<SectionTitle className="text-primaryDark">
 							{data?.title}
 						</SectionTitle>

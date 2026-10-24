@@ -4,7 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import SectionLayout from "@/templates/SectionLayout";
 import SectionTitle from "@/components/common/SectionTitle";
-import SectionLabel from "@/components/common/SectionLabel";
 import ImageLoader from "@/utils/ImageLoader";
 
 type Currency = "usd" | "inr";
@@ -25,8 +24,7 @@ const CoachPricing = ({ pricing, templatePack, bookingLink }: any) => {
 			/>
 			<SectionLayout className={``}>
 				<div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-[24px] mb-[40px] lg:mb-[56px]">
-					<div className="max-w-[700px] mx-auto lg:mx-0 flex flex-col items-center lg:items-start gap-[20px]">
-						<SectionLabel>Pricing</SectionLabel>
+					<div className="max-w-[700px] mx-auto lg:mx-0 flex flex-col items-center lg:items-start gap-[12px]">
 						<SectionTitle className={`text-primaryLight`}>
 							{pricing?.title}
 						</SectionTitle>
@@ -129,9 +127,6 @@ const CoachPricing = ({ pricing, templatePack, bookingLink }: any) => {
 							key={pkg.name}
 							className="mt-[16px] relative rounded-[24px] overflow-hidden bg-surface border border-white/[0.08] p-[28px] lg:px-[40px] lg:py-[32px] flex flex-col lg:flex-row lg:items-center gap-[20px] lg:gap-[40px]">
 							<div className="lg:w-[30%] shrink-0">
-								<p className="text-lime font-[500] uppercase tracking-[0.14em] text-[12px] leading-[18px] mb-[10px]">
-									Add-on
-								</p>
 								<h3 className="text-primaryLight font-[500] text-[26px] leading-[32px] mb-[6px]">
 									{pkg.name}
 								</h3>
@@ -184,9 +179,6 @@ const CoachPricing = ({ pricing, templatePack, bookingLink }: any) => {
 							/>
 						</div>
 						<div className="flex flex-col justify-center text-center lg:text-left px-[8px] pb-[16px] lg:p-0">
-							<p className="text-lime font-[500] uppercase tracking-[0.14em] text-[12px] leading-[18px] mb-[12px]">
-								{templatePack.eyebrow}
-							</p>
 							<h3 className="text-primaryLight font-[500] text-[30px] leading-[1.1] tracking-[-0.03em] lg:text-[40px] mb-[14px]">
 								{templatePack.title}
 							</h3>

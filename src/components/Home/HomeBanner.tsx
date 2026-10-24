@@ -19,18 +19,6 @@ const HomeBanner = ({ data, logoSlider }: { data: any; logoSlider: any }) => {
 				<AnimateInView
 					reset={false}
 					animation={"translateFromBottom"}
-					className="mb-[28px] flex justify-center lg:justify-start">
-					<p className="inline-flex items-center gap-[10px] rounded-full border border-white/10 bg-white/[0.04] px-[14px] py-[8px] text-[13px] leading-[16px] font-[500] text-primaryLight/80 backdrop-blur">
-						<span className="relative flex h-[8px] w-[8px]">
-							<span className="absolute inline-flex h-full w-full animate-pulse-dot rounded-full bg-lime" />
-						</span>
-						{data?.key_phrase || "Brand · Web · Growth studio — Kochi, India"}
-					</p>
-				</AnimateInView>
-
-				<AnimateInView
-					reset={false}
-					animation={"translateFromBottom"}
 					delay={0.05}>
 					<h1 className="mx-auto max-w-[1180px] text-center text-[44px] leading-[0.98] font-[500] tracking-[-0.045em] text-primaryLight sm:text-[60px] md:text-[76px] lg:mx-0 lg:text-left lg:text-[96px] 2xl:text-[108px]">
 						<AccentText text={data?.title} />
@@ -96,10 +84,7 @@ const HomeBanner = ({ data, logoSlider }: { data: any; logoSlider: any }) => {
 									<span className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-black/0" />
 									<div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-[18px] md:p-[24px]">
 										<div>
-											<p className="text-[12px] uppercase tracking-[0.14em] text-primaryLight/60">
-												Case study 0{index + 1}
-											</p>
-											<p className="mt-[4px] text-[20px] font-[500] tracking-[-0.02em] text-primaryLight md:text-[24px]">
+											<p className="text-[20px] font-[500] tracking-[-0.02em] text-primaryLight md:text-[24px]">
 												{item?.project_title}
 											</p>
 										</div>
@@ -114,10 +99,7 @@ const HomeBanner = ({ data, logoSlider }: { data: any; logoSlider: any }) => {
 				)}
 
 				{/* Client logos */}
-				<div className="mt-[56px] flex flex-col items-center gap-[20px] lg:mt-[72px] lg:flex-row lg:gap-[40px]">
-					<p className="shrink-0 text-[13px] uppercase tracking-[0.14em] text-muted">
-						Trusted by growing brands
-					</p>
+				<div className="mt-[56px] lg:mt-[72px]">
 					<LogoSlider logoSlider={logoSlider} />
 				</div>
 			</SectionLayout>

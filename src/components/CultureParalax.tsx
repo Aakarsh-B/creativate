@@ -34,9 +34,6 @@ const CultureParalax = ({ data }: { data: any }) => {
 					/>
 				</motion.div>
 				<span className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-				<p className="absolute bottom-[20px] left-[20px] text-[13px] uppercase tracking-[0.14em] text-primaryLight/80 lg:bottom-[32px] lg:left-[36px]">
-					Inside the studio
-				</p>
 			</motion.div>
 		</section>
 	);

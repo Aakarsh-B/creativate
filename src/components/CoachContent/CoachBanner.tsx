@@ -21,10 +21,6 @@ const CoachBanner = ({ data }: any) => {
 						<AnimateInView
 							reset={false}
 							animation={"translateFromBottom"}>
-							<p className="mb-[24px] inline-flex items-center gap-[10px] rounded-full border border-white/10 bg-white/[0.04] px-[14px] py-[8px] text-[13px] leading-[16px] font-[500] text-primaryLight/80">
-								<span className="h-[6px] w-[6px] rounded-full bg-lime" />
-								{data?.eyebrow}
-							</p>
 							<h1 className="mb-[20px] text-[40px] leading-[1] font-[500] tracking-[-0.045em] text-primaryLight sm:text-[52px] lg:text-[68px] xl:text-[76px]">
 								<AccentText text={data?.title} />
 							</h1>

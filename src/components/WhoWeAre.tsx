@@ -1,5 +1,5 @@
 import SectionLayout from "@/templates/SectionLayout";
-import SectionLabel from "@/components/common/SectionLabel";
+import SectionTitle from "@/components/common/SectionTitle";
 import AnimateInView from "@/templates/animateInView";
 import Link from "next/link";
 
@@ -7,10 +7,10 @@ const WhoWeAre = ({ data }: { data: any }) => {
 	return (
 		<section className="relative bg-primaryDark py-[80px] lg:py-[140px]">
 			<SectionLayout className="grid grid-cols-1 gap-[32px] lg:grid-cols-12 lg:gap-[40px]">
-				<div className="flex justify-center lg:col-span-3 lg:justify-start">
-					<SectionLabel index="01">{data?.title}</SectionLabel>
+				<div className="flex justify-center lg:col-span-4 lg:justify-start">
+					<SectionTitle className="text-primaryLight">{data?.title}</SectionTitle>
 				</div>
-				<div className="lg:col-span-9">
+				<div className="lg:col-span-8">
 					<AnimateInView
 						reset={false}
 						animation={"translateFromBottom"}>

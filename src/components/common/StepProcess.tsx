@@ -1,6 +1,5 @@
 import SectionLayout from "@/templates/SectionLayout";
 import SectionTitle from "@/components/common/SectionTitle";
-import SectionLabel from "@/components/common/SectionLabel";
 import AnimateInView from "@/templates/animateInView";
 import React from "react";
 
@@ -9,7 +8,7 @@ interface ProcessItem {
 	description: string;
 }
 
-const StepProcess = ({ data, sectionId, labelIndex }: any) => {
+const StepProcess = ({ data, sectionId }: any) => {
 	const processItems: ProcessItem[] = Object.values(data?.process_item_list ?? {});
 
 	return (
@@ -21,8 +20,7 @@ const StepProcess = ({ data, sectionId, labelIndex }: any) => {
 				/>
 			)}
 			<SectionLayout>
-				<div className="mb-[48px] flex flex-col items-center gap-[20px] lg:mb-[72px] lg:items-start">
-					<SectionLabel index={labelIndex}>How we work</SectionLabel>
+				<div className="mb-[48px] flex flex-col items-center lg:mb-[72px] lg:items-start">
 					<SectionTitle className={`text-primaryLight max-w-[760px]`}>
 						{data?.title}
 					</SectionTitle>

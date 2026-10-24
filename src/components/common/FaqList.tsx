@@ -3,7 +3,6 @@
 import { faqProps } from "@/lib/types";
 import React, { useState } from "react";
 import SectionTitle from "@/components/common/SectionTitle";
-import SectionLabel from "@/components/common/SectionLabel";
 
 const FaqList: React.FC<faqProps> = ({ title, desc, faqList, className }) => {
 	const [selected, setSelected] = useState(0);
@@ -11,7 +10,6 @@ const FaqList: React.FC<faqProps> = ({ title, desc, faqList, className }) => {
 	return (
 		<div className={`w-full ${className ? className : ""}`}>
 			<div className="mb-[40px] flex flex-col items-center gap-[20px] lg:items-start">
-				<SectionLabel>FAQ</SectionLabel>
 				{title && (
 					<SectionTitle className={`text-primaryLight`}>{title}</SectionTitle>
 				)}

@@ -252,8 +252,8 @@ function BookConsultation(props: any) {
 							<div className="flex flex-col md:flex-row flex-wrap">
 								<div className="relative w-full h-full md:max-w-[100%] mb-[40px]">
 									<p
-										className={`text-[13px] font-[500] uppercase tracking-[0.14em] text-lime text-center sm:text-left mb-[16px]`}>
-										1. What can we help you with ?
+										className={`text-[20px] leading-[1.3] font-[500] tracking-[-0.02em] text-primaryLight text-center sm:text-left mb-[16px]`}>
+										What can we help you with?
 									</p>
 									<div className="grid sm:grid-cols-2 gap-[10px]">
 										{props?.data?.service_provided?.map(
@@ -278,8 +278,8 @@ function BookConsultation(props: any) {
 								</div>
 								<div className="relative w-full h-full md:max-w-[100%] mb-[30px]">
 									<p
-										className={`text-[13px] font-[500] uppercase tracking-[0.14em] text-lime text-center sm:text-left mb-[16px]`}>
-										2. About Your Project
+										className={`text-[20px] leading-[1.3] font-[500] tracking-[-0.02em] text-primaryLight text-center sm:text-left mb-[16px]`}>
+										About your project
 									</p>
 									<Input
 										errorData={errorData?.budget ?? {}}
@@ -317,8 +317,8 @@ function BookConsultation(props: any) {
 
 								<div className="relative w-full h-full md:max-w-[100%] mb-[30px]">
 									<p
-										className={`text-[13px] font-[500] uppercase tracking-[0.14em] text-lime text-center sm:text-left mb-[16px]`}>
-										3. About You
+										className={`text-[20px] leading-[1.3] font-[500] tracking-[-0.02em] text-primaryLight text-center sm:text-left mb-[16px]`}>
+										About you
 									</p>
 									<Input
 										errorData={errorData?.name ?? {}}

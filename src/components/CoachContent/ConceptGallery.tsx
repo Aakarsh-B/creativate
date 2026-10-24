@@ -1,6 +1,5 @@
 import SectionLayout from "@/templates/SectionLayout";
 import SectionTitle from "@/components/common/SectionTitle";
-import SectionLabel from "@/components/common/SectionLabel";
 import ImageLoader from "@/utils/ImageLoader";
 
 const ConceptGallery = ({ data }: any) => {
@@ -8,8 +7,7 @@ const ConceptGallery = ({ data }: any) => {
 		<section className="relative bg-primaryDark py-[80px] lg:py-[140px]">
 			<SectionLayout>
 				<div className="mb-[40px] grid grid-cols-1 gap-[20px] lg:mb-[64px] lg:grid-cols-12 lg:items-end">
-					<div className="flex flex-col items-center gap-[20px] lg:col-span-7 lg:items-start">
-						<SectionLabel>Concepts</SectionLabel>
+					<div className="flex flex-col items-center lg:col-span-7 lg:items-start">
 						<SectionTitle className="text-primaryLight">{data?.title}</SectionTitle>
 					</div>
 					<p className="text-center text-[17px] leading-[1.55] text-primaryLight/60 lg:col-span-5 lg:text-left">
@@ -34,9 +32,6 @@ const ConceptGallery = ({ data }: any) => {
 								/>
 							</a>
 							<div className="p-[24px] lg:p-[28px]">
-								<p className="mb-[10px] text-[12px] font-[500] uppercase tracking-[0.14em] text-lime">
-									{item.niche}
-								</p>
 								<h3 className="mb-[8px] text-[24px] leading-[1.15] font-[500] tracking-[-0.025em] text-primaryLight lg:text-[26px]">
 									{item.name}
 								</h3>

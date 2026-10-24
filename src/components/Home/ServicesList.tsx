@@ -4,7 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import SectionLayout from "@/templates/SectionLayout";
 import SectionTitle from "@/components/common/SectionTitle";
-import SectionLabel from "@/components/common/SectionLabel";
 import ImageLoader from "@/utils/ImageLoader";
 
 // Numbered service rows. Desktop: hovering a row floats its project image.
@@ -24,9 +23,6 @@ const ServicesList = ({ data, sectionId }: any) => {
 			<SectionLayout>
 				<div className="mb-[48px] grid grid-cols-1 gap-[24px] lg:mb-[72px] lg:grid-cols-12 lg:items-end">
 					<div className="lg:col-span-7">
-						<div className="mb-[20px] flex justify-center lg:justify-start">
-							<SectionLabel index="02">Services</SectionLabel>
-						</div>
 						<SectionTitle className="text-primaryLight">
 							{data?.title}
 						</SectionTitle>
@@ -98,7 +94,7 @@ const ServicesList = ({ data, sectionId }: any) => {
 												className="object-cover"
 											/>
 											<span className="absolute bottom-[12px] left-[12px] rounded-full bg-primaryDark/80 px-[14px] py-[8px] text-[13px] text-primaryLight backdrop-blur">
-												{item?.project_title} — {item?.link_label} ↗
+												{item?.project_title} · {item?.link_label} ↗
 											</span>
 										</Link>
 									</div>

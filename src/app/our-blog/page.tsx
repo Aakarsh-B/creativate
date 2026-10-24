@@ -15,8 +15,6 @@ async function getBlogData() {
 export async function generateMetadata(): Promise<Metadata> {
 	const pageData = await getContent(`/pages?slug=blog&acf_format=standard`);
 
-	console.log(pageData);
-
 	return {
 		title: pageData[0]?.acf?.metadata?.title ?? "Creativate",
 		description:
@@ -32,11 +30,10 @@ const OurBlog = async () => {
 
 	const blogData = await getBlogData();
 	const blogList = blogData;
-	console.log('blogList', blogList.length);
 
 	return (
 		<>
-			<div className="pt-[106px] lg:pt-[160px] bg-primaryDark">
+			<div className="pt-[120px] lg:pt-[180px] bg-primaryDark">
 				<DescBannerWithImage data={data?.banner} />
 				<OurBlogList data={blogList} />
 			</div>

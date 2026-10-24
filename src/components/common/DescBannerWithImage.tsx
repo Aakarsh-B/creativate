@@ -1,32 +1,30 @@
 import SectionLayout from "@/templates/SectionLayout";
-import ImageLoader from "@/utils/ImageLoader";
+import AnimateInView from "@/templates/animateInView";
+import AccentText from "@/utils/accentText";
 
+// Inner-page hero: oversized title with intro copy alongside
 const DescBannerWithImage = ({ data }: any) => {
 	return (
-		<SectionLayout className={``}>
-			<div
-				className={`px-[20px] py-[37px] lg:px-[80px] lg:py-[60px] bg-[#191B35] rounded-[8px] overflow-hidden relative`}>
-				<span
-					className={`absolute w-full h-[15px] top-0 right-0 left-0 bg-[linear-gradient(91.94deg,#336CFB_0%,#11C3C1_100%)]`}
-				/>
-				<div className="max-w-[660px] ml-0 mr-auto text-center lg:text-left z-[1]">
-					<h2
-						className={`font-[500] text-primaryLight text-[32px] leading-[38px] mb-[14px] lg:text-[40px] lg:leading-[48px] lg:mb-[14px]`}>
-						{data?.title}
-					</h2>
-					<p
-						className={`text-primaryLight font-[400] text-[20px] leading-[24px]`}>
+		<SectionLayout className="relative">
+			<div className="pointer-events-none absolute -top-[200px] left-[10%] h-[400px] w-[600px] rounded-full bg-primaryBlue/20 blur-[140px]" />
+			<div className="relative grid grid-cols-1 gap-[24px] border-b border-white/10 pb-[40px] lg:grid-cols-12 lg:items-end lg:pb-[64px]">
+				<AnimateInView
+					reset={false}
+					animation={"translateFromBottom"}
+					className="lg:col-span-8">
+					<h1 className="text-center text-[52px] leading-[0.95] font-[500] tracking-[-0.045em] text-primaryLight md:text-[80px] lg:text-left lg:text-[112px]">
+						<AccentText text={data?.title} />
+					</h1>
+				</AnimateInView>
+				<AnimateInView
+					reset={false}
+					animation={"translateFromBottom"}
+					delay={0.1}
+					className="lg:col-span-4">
+					<p className="text-center text-[17px] leading-[1.55] text-primaryLight/60 lg:text-left">
 						{data?.description}
 					</p>
-				</div>
-				<div className="absolute lg:w-[35%] lg:max-w-[600px] h-full top-0 right-0 hidden lg:block z-[0]">
-					<ImageLoader
-						src={data?.bg_image}
-						fill
-						alt="Banner"
-						className="z-[2]"
-					/>
-				</div>
+				</AnimateInView>
 			</div>
 		</SectionLayout>
 	);

@@ -1,85 +1,69 @@
 "use client";
 
 import { faqProps } from "@/lib/types";
-import React, { useState, useRef, useEffect } from "react";
-import useOnResize from "@/utils/hooks/useOnResize";
+import React, { useState } from "react";
 import SectionTitle from "@/components/common/SectionTitle";
+import SectionLabel from "@/components/common/SectionLabel";
 
 const FaqList: React.FC<faqProps> = ({ title, desc, faqList, className }) => {
-	const { width: isResize } = useOnResize();
-	const [hgt, setHeight] = useState<any>(0);
 	const [selected, setSelected] = useState(0);
-	const answerRef = useRef<any>([]);
-	const activeTabRef = useRef<any>([]);
-
-	// UPDATE OPEN & CLOSE OF ACCORDIAN BASED ON CLICK
-	const openAccordion = (index: any) => {
-		setHeight(answerRef?.current[index].offsetHeight);
-		setSelected(index);
-	};
-
-	// UPDATE HEIGHT OF ANSWER TAB & IMAGE
-	useEffect(() => {
-		setTimeout(() => {
-			setHeight(answerRef?.current[selected]?.offsetHeight);
-		}, 350);
-	}, [selected, hgt, isResize]);
 
 	return (
-		<div className={`w-full lg:w-1/2 ${className ? className : ""}`}>
-			<div className="px-[24px] lg:px-0 pb-[30px]">
+		<div className={`w-full ${className ? className : ""}`}>
+			<div className="mb-[40px] flex flex-col items-center gap-[20px] lg:items-start">
+				<SectionLabel>FAQ</SectionLabel>
 				{title && (
-					<SectionTitle className={`text-primaryLight mb-[20px]`}>
-						{title}
-					</SectionTitle>
+					<SectionTitle className={`text-primaryLight`}>{title}</SectionTitle>
 				)}
 				{desc && (
-					<p className="text-[20px] leading-[24px] text-center text-primaryLight font-[400] md:text-left opacity-50">
+					<p className="max-w-[520px] text-center text-[17px] leading-[1.55] text-primaryLight/60 lg:text-left">
 						{desc}
 					</p>
 				)}
 			</div>
-			{faqList.length > 2 &&
-				faqList.map((item: any, index: any) => (
-					<div
-						key={index}
-						ref={(element: any) =>
-							(activeTabRef.current[index] = element)
-						}
-						className={`relative group ${
-							selected === index ? "active " : ""
-						} px-[24px] py-[24px] lg:px-[32px] border-b border-primaryLight/30`}
-						onClick={() => {
-							openAccordion(index);
-						}}>
-						<h3
-							className={`text-primaryLight cursor-pointer font-[500] text-[20px] leading-[28px] text-left transition-[padding] duration-300 ease-in-out mb-[8px] relative flex items-start justify-between`}>
-							<p className="w-[90%]">{item?.question}</p>
-							<span
-								className={`w-[18px] h-[18px] relative top-[8px]`}>
-								<span className="absolute bg-primaryLight border-solid border-primaryLight top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[1px] transition-all duration-300 ease-linear"></span>
-								<span className="absolute bg-primaryLight border-solid border-primaryLight top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[1px] rotate-90 group-[.active]:rotate-0 origin-center transition-all duration-300 ease-linear"></span>
-							</span>
-						</h3>
-						<div
-							className={`block relative h-0 overflow-hidden transition-all duration-300 ease-out`}
-							style={{
-								height: selected === index ? `${hgt}px` : "0px",
-							}}>
+			<div className="border-t border-white/10">
+				{faqList?.length > 0 &&
+					faqList.map((item: any, index: number) => {
+						const isOpen = selected === index;
+						return (
 							<div
-								ref={(element: any) =>
-									(answerRef.current[index] = element)
-								}>
-								<p
-									className={`text-primaryLight font-normal text-[16px] leading-[20px] w-full md:w-[88%] mr-auto ml-0 opacity-50`}
-									dangerouslySetInnerHTML={{
-										__html: item.answer,
-									}}
-								/>
+								key={index}
+								className="border-b border-white/10">
+								<button
+									type="button"
+									aria-expanded={isOpen}
+									onClick={() => setSelected(isOpen ? -1 : index)}
+									className="group flex w-full items-start justify-between gap-[24px] py-[24px] text-left">
+									<span
+										className={`text-[18px] leading-[1.35] font-[500] tracking-[-0.01em] transition-colors duration-300 lg:text-[20px] ${
+											isOpen ? "text-primaryLight" : "text-primaryLight/75 group-hover:text-primaryLight"
+										}`}>
+										{item?.question}
+									</span>
+									<span
+										className={`mt-[2px] flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-full text-[18px] leading-none transition-all duration-500 ease-expo ${
+											isOpen ? "rotate-45 bg-lime text-primaryDark" : "bg-white/[0.06] text-primaryLight"
+										}`}>
+										+
+									</span>
+								</button>
+								<div
+									className={`grid transition-all duration-500 ease-expo ${
+										isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+									}`}>
+									<div className="overflow-hidden">
+										<p
+											className="max-w-[600px] pb-[24px] text-[16px] leading-[1.6] text-primaryLight/60"
+											dangerouslySetInnerHTML={{
+												__html: item.answer,
+											}}
+										/>
+									</div>
+								</div>
 							</div>
-						</div>
-					</div>
-				))}
+						);
+					})}
+			</div>
 		</div>
 	);
 };

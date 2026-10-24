@@ -6,7 +6,10 @@
 
 html,
 body {
-	font-family: var(--font-glacial-regular);
+	font-family: var(--font-sans), system-ui, sans-serif;
+	background: var(--primaryDark);
+	color: var(--light);
+	font-feature-settings: "ss01", "cv11";
 }
 
 .h1,
@@ -23,7 +26,54 @@ h5,
 h6,
 .titleFont,
 .font-poppins {
-	font-family: var(--font-poppins);
+	font-family: var(--font-sans), system-ui, sans-serif;
+	letter-spacing: -0.02em;
+}
+
+::selection {
+	background: var(--lime);
+	color: var(--primaryDark);
+}
+
+// Italic serif accent used inside headlines (see utils/accentText)
+.accent {
+	font-family: var(--font-serif), Georgia, serif;
+	font-style: italic;
+	font-weight: 400;
+	letter-spacing: -0.01em;
+}
+
+// Film-grain overlay for dark hero sections
+.grain::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	opacity: 0.06;
+	mix-blend-mode: overlay;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.grid-lines {
+	background-image: linear-gradient(to right, rgba(242, 240, 235, 0.05) 1px, transparent 1px),
+		linear-gradient(to bottom, rgba(242, 240, 235, 0.05) 1px, transparent 1px);
+	background-size: 80px 80px;
+	mask-image: radial-gradient(ellipse at 50% 30%, #000 20%, transparent 75%);
+}
+
+.marquee-mask {
+	mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
 }
 
 .imgloader::before {
@@ -70,63 +120,6 @@ h6,
 	}
 }
 
-.customer-stories {
-	.slick-next,
-	.slick-prev,
-	.slick-next:hover,
-	.slick-prev:hover {
-		display: none;
-		background-color: #ffffff;
-		width: 40px;
-		height: 40px;
-		border-radius: 8px;
-		z-index: 1;
-		img {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-		}
-		&:before {
-			content: "";
-		}
-	}
-	.slick-next {
-		top: 42%;
-		transform: rotate(-180deg);
-	}
-}
-
-.homeCardSliderDeck {
-	background: linear-gradient(
-		350deg,
-		rgb(25 27 53 / 90%) 5%,
-		rgb(25 27 53 / 75%) 25%,
-		rgb(25 27 53 / 50%) 50%,
-		rgb(25 27 53 / 2%) 75%,
-		rgba(0, 0, 0, 0) 100%
-	);
-}
-
-.logoSliderShade {
-	&.left {
-		background: linear-gradient(
-			270deg,
-			rgb(10 11 25 / 49%) 0%,
-			rgb(10 11 25) 50%,
-			rgb(10, 11, 25) 100%
-		);
-	}
-	&.right {
-		background: linear-gradient(
-			90deg,
-			rgb(10 11 25 / 49%) 0%,
-			rgb(10 11 25) 50%,
-			rgb(10, 11, 25) 100%
-		);
-	}
-}
-
 .targetCode {
 	position: absolute;
 	top: -90px;
@@ -139,65 +132,8 @@ h6,
 	}
 }
 
-// Home banner Stack card
-.cardHolder {
-	transform-style: preserve-3d;
-	.stack-card__item {
-		opacity: 0;
-		transform: rotateY(0deg) translate(8%, -6%);
-		transition: transform 1.2s;
-		transform-style: preserve-3d;
-	}
-	.stack-card__item.hide {
-		opacity: 0;
-		// transform: rotateY(0deg) translate(0, -25%);
-		transition: all 0.5s ease-in-out;
-	}
-	.stack-card__item[data-position="1"] {
-		z-index: 3;
-		transform: rotateY(0deg) translate(0px, 6%) !important;
-		opacity: 1;
-	}
-	.stack-card__item[data-position="2"] {
-		z-index: 1;
-		transform: rotateY(0deg) translate(6%, 0%);
-		opacity: 0.7;
-	}
-	.stack-card__item[data-position="3"] {
-		z-index: 1;
-		transform: rotateY(0deg) translate(12%, -6%);
-		opacity: 0.5;
-	}
-	@media screen and (max-width: 1023.98px) {
-		transform: rotateY(0deg) translate(0, -4%);
-		.stack-card__item[data-position="1"] {
-			transform: rotateY(0deg) translate(-3%, 4%) !important;
-		}
-		.stack-card__item[data-position="2"] {
-			transform: rotateY(0deg) translate(0%, 0%);
-		}
-		.stack-card__item[data-position="3"] {
-			transform: rotateY(0deg) translate(3%, -4%);
-		}
-	}
-}
-
-.faqContact-wrap {
-	.contactForm-wrap {
-		padding: 0 0 0 50px;
-	}
-
-	@media screen and (max-width: 1023.98px) {
-		max-width: 550px;
-		.contactForm-wrap {
-			margin: 40px auto 0px;
-			padding: 0;
-		}
-	}
-}
-
 .blog-details {
-	color: #f4f4f4;
+	color: #f2f0eb;
 	text-align: left;
 
 	h3 {
@@ -242,7 +178,7 @@ h6,
 		display: flex;
 	}
 	a {
-		color: #0067ff;
+		color: #d4ff3a;
 		text-decoration: underline;
 		font-weight: 400;
 		transition: all 0.3s ease-in-out;
@@ -290,5 +226,5 @@ h6,
 }
 
 .blog-banner {
-	background: linear-gradient(180deg, rgba(10, 11, 25, 0) 0%, #0a0b19 100%);
+	background: linear-gradient(180deg, rgba(10, 10, 11, 0) 0%, #0a0a0b 100%);
 }

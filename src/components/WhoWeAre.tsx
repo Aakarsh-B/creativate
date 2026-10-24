@@ -1,55 +1,37 @@
 import SectionLayout from "@/templates/SectionLayout";
-import SectionTitle from "@/components/common/SectionTitle";
+import SectionLabel from "@/components/common/SectionLabel";
+import AnimateInView from "@/templates/animateInView";
 import Link from "next/link";
-import ImageLoader from "@/utils/ImageLoader";
 
 const WhoWeAre = ({ data }: { data: any }) => {
-	const CtaButton = ({ text, link }: { text: string; link: string }) => {
-		return (
-			<div className="block text-center lg:text-left">
-				<Link
-					href={`${link ?? "#"}`}
-					className={`inline-block w-full sm:w-auto text-[24px] leading-[30px] font-[400] text-center max-h-[80px] rounded-[8px] border border-solid border-primaryLight px-[32px] py-[16px] bg-primaryLight text-primaryBlue break-words lg:mx-auto`}>
-					{text}
-				</Link>
-			</div>
-		);
-	};
 	return (
-		<section
-			className={`py-[50px] lg:py-[100px] 2xl:pt-[100px] bg-primaryBlue relative overflow-hidden`}>
-			<SectionLayout
-				className={`flex flex-col lg:flex-row justify-between z-10`}>
-				<div className="w-full max-md:max-w-[350px] max-md:mx-auto lg:w-[40%] text-center mb-[16px] md:mb-[32px] lg:mb-0 lg:flex lg:flex-col justify-between">
-					<SectionTitle className={`text-primaryLight`}>
-						{data?.title}
-					</SectionTitle>
-					<div className="max-lg:hidden">
-						<CtaButton
-							text={data?.button_text}
-							link={data?.button_link}
-						/>
-					</div>
+		<section className="relative bg-primaryDark py-[80px] lg:py-[140px]">
+			<SectionLayout className="grid grid-cols-1 gap-[32px] lg:grid-cols-12 lg:gap-[40px]">
+				<div className="flex justify-center lg:col-span-3 lg:justify-start">
+					<SectionLabel index="01">{data?.title}</SectionLabel>
 				</div>
-				<div className="w-full mx-auto max-w-[600px] lg:ml-auto lg:mr-0 lg:max-w-[750px] lg:w-[60%]">
-					<p className="text-[20px] leading-[24px] text-primaryLight font-[400] text-center lg:text-[26px] lg:leading-[32px] lg:text-left transition-all duration-300 ease-in-out mb-[16px] md:mb-[32px] lg:mb-0">
-						{data?.description}
-					</p>
-					<div className="lg:hidden">
-						<CtaButton
-							text={data?.button_text}
-							link={data?.button_link}
-						/>
+				<div className="lg:col-span-9">
+					<AnimateInView
+						reset={false}
+						animation={"translateFromBottom"}>
+						<p className="text-center text-[24px] leading-[1.3] font-[400] tracking-[-0.02em] text-primaryLight md:text-[30px] lg:text-left lg:text-[36px] lg:leading-[1.25]">
+							{data?.description}
+						</p>
+					</AnimateInView>
+					<div className="mt-[40px] flex justify-center lg:justify-start">
+						<Link
+							href={`${data?.button_link ?? "#"}`}
+							className="group inline-flex items-center gap-[14px] text-[17px] font-[500] text-primaryLight">
+							<span className="flex h-[52px] w-[52px] items-center justify-center rounded-full border border-white/20 transition-all duration-500 ease-expo group-hover:border-lime group-hover:bg-lime group-hover:text-primaryDark group-hover:rotate-45">
+								↗
+							</span>
+							<span className="border-b border-white/20 pb-[2px] transition-colors duration-300 group-hover:border-lime">
+								{data?.button_text}
+							</span>
+						</Link>
 					</div>
 				</div>
 			</SectionLayout>
-			<div className="hidden lg:block absolute left-[-620px] bottom-[-300px] w-[1133px] h-[611px] rotate-180 z-0">
-				<ImageLoader
-					src={"/images/who-we-are-bg.png"}
-					fill
-					alt="background-image"
-				/>
-			</div>
 		</section>
 	);
 };

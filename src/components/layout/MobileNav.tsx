@@ -1,9 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import NavItems from "./NavItem";
-import { motion } from "framer-motion";
-import ActionMenuList from "./ActionMenuList";
 
 const MobileNav = ({ menuList, actionList }: any) => {
 	const [isMobOpen, setIsMobOpen] = useState(false);
@@ -12,37 +10,38 @@ const MobileNav = ({ menuList, actionList }: any) => {
 		setIsMobOpen(!isMobOpen);
 	};
 
+	// Lock page scroll while the menu sheet is open
+	useEffect(() => {
+		document.body.style.overflow = isMobOpen ? "hidden" : "";
+		return () => {
+			document.body.style.overflow = "";
+		};
+	}, [isMobOpen]);
+
 	return (
 		<>
 			<button
-				className="flex flex-col items-center justify-center z-[99] relative"
+				aria-label={isMobOpen ? "Close menu" : "Open menu"}
+				aria-expanded={isMobOpen}
+				className="flex h-[44px] w-[44px] flex-col items-center justify-center rounded-full bg-white/10 z-[99] relative"
 				onClick={handleClick}>
 				<span
-					className={`bg-primaryLight block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
-						isMobOpen
-							? "rotate-45 translate-y-1"
-							: "-translate-y-0.5"
+					className={`bg-primaryLight block transition-all duration-300 ease-out h-[1.5px] w-[18px] rounded-sm ${
+						isMobOpen ? "rotate-45 translate-y-[3.5px]" : "-translate-y-[2px]"
 					}`}></span>
 				<span
-					className={`bg-primaryLight block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${
-						isMobOpen ? "opacity-0" : "opacity-100"
-					}`}></span>
-				<span
-					className={`bg-primaryLight block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
-						isMobOpen
-							? "-rotate-45 -translate-y-1"
-							: "translate-y-0.5"
+					className={`bg-primaryLight block transition-all duration-300 ease-out h-[1.5px] w-[18px] rounded-sm ${
+						isMobOpen ? "-rotate-45 -translate-y-[1px]" : "translate-y-[2px]"
 					}`}></span>
 			</button>
-			{isMobOpen && (
-				<span className="fixed inset-0 bg-[rgba(0,0,0,0.6)] z-[9]" />
-			)}
-			<motion.div
-				className={`max-w-[450px] h-[100vh] overflow-y-scroll w-full flex flex-col justify-between items-center fixed top-0 ${
-					isMobOpen ? "right-0" : "-right-full"
-				} transition-all duration-300 ease-in-out z-[10] bg-primaryDark rounded-lg pt-[98px] pb-[40px] px-[5px] gap-y-[100px]`}>
-				<nav className="flex items-center flex-col justify-center max-w-[340px] lg:max-w-full w-full">
-					{menuList.length > 0 &&
+			<div
+				className={`fixed inset-x-[12px] top-[80px] z-[98] origin-top rounded-[28px] border border-white/10 bg-surface p-[12px] shadow-[0_24px_60px_rgba(0,0,0,0.5)] transition-all duration-500 ease-expo ${
+					isMobOpen
+						? "opacity-100 scale-100 pointer-events-auto"
+						: "opacity-0 scale-95 pointer-events-none"
+				}`}>
+				<nav className="flex flex-col">
+					{menuList?.length > 0 &&
 						menuList.map((item: any) => (
 							<NavItems
 								key={item.menu_label}
@@ -55,8 +54,9 @@ const MobileNav = ({ menuList, actionList }: any) => {
 							/>
 						))}
 				</nav>
-				<nav className="flex items-center flex-col justify-center max-w-[340px] lg:max-w-full w-full">
-					{actionList.length > 0 &&
+				<div className="my-[8px] h-px bg-white/10" />
+				<nav className="flex flex-col gap-[8px]">
+					{actionList?.length > 0 &&
 						actionList.map((item: any) => (
 							<NavItems
 								key={item.menu_label}
@@ -69,8 +69,7 @@ const MobileNav = ({ menuList, actionList }: any) => {
 							/>
 						))}
 				</nav>
-				<ActionMenuList />
-			</motion.div>
+			</div>
 		</>
 	);
 };

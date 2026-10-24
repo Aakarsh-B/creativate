@@ -35,7 +35,7 @@ const CoachPricing = ({ pricing, templatePack, bookingLink }: any) => {
 					<div
 						role="group"
 						aria-label="Currency"
-						className="self-center lg:self-auto flex p-[4px] bg-[#191B35] rounded-[8px] shrink-0">
+						className="self-center lg:self-auto flex p-[4px] bg-[#141416] rounded-[8px] shrink-0">
 						{(["usd", "inr"] as Currency[]).map((c) => (
 							<button
 								key={c}
@@ -66,7 +66,7 @@ const CoachPricing = ({ pricing, templatePack, bookingLink }: any) => {
 							className={`relative flex flex-col rounded-[8px] overflow-hidden px-[24px] pt-[40px] pb-[28px] ${
 								pkg.highlight
 									? "bg-cardBg"
-									: "bg-[#191B35]"
+									: "bg-[#141416]"
 							}`}>
 							<span className="absolute w-full h-[10px] top-0 right-0 left-0 bg-[linear-gradient(91.94deg,#336CFB_0%,#11C3C1_100%)]" />
 							{pkg.highlight && (
@@ -126,7 +126,7 @@ const CoachPricing = ({ pricing, templatePack, bookingLink }: any) => {
 					.map((pkg: any) => (
 						<article
 							key={pkg.name}
-							className="mt-[24px] relative rounded-[8px] overflow-hidden bg-[#191B35] px-[24px] pt-[36px] pb-[28px] lg:px-[40px] lg:py-[32px] flex flex-col lg:flex-row lg:items-center gap-[20px] lg:gap-[40px]">
+							className="mt-[24px] relative rounded-[8px] overflow-hidden bg-[#141416] px-[24px] pt-[36px] pb-[28px] lg:px-[40px] lg:py-[32px] flex flex-col lg:flex-row lg:items-center gap-[20px] lg:gap-[40px]">
 							<span className="absolute w-full h-[10px] top-0 right-0 left-0 bg-[linear-gradient(91.94deg,#456FF1_0%,#EA88CE_100%)]" />
 							<div className="lg:w-[30%] shrink-0">
 								<p className="font-poppins text-primaryBlue font-[600] uppercase tracking-[0.12em] text-[13px] leading-[18px] mb-[8px]">

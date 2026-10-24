@@ -1,52 +1,33 @@
-"use client";
-
 import ImageLoader from "@/utils/ImageLoader";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
-const LogoSlider = ({ desktopView, mobileView, logoSlider, customerStories }: any) => {
-	const settings = {
-		dots: false,
-		arrows: false,
-		infinite: true,
-		slidesToShow: desktopView,
-		slidesToScroll: 1,
-		autoplay: true,
-		speed: 3000,
-		autoplaySpeed: 0,
-		cssEase: "linear",
-		responsive: [
-			{
-				breakpoint: 600,
-				settings: {
-					slidesToShow: mobileView,
-					slidesToScroll: 1,
-				},
-			},
-		],
-	};
+// Infinite CSS marquee; the list is rendered twice so the loop is seamless
+const LogoSlider = ({ logoSlider, className }: any) => {
+	if (!logoSlider?.length) return null;
+
+	const loop = [...logoSlider, ...logoSlider];
 
 	return (
-		<>
-			{logoSlider !== undefined && (
-				<Slider {...settings}>
-					{logoSlider.map((item: any, i: number) => (
-						<div
-							key={i}
-							className={`${customerStories ? 'lg:w-full' : '!w-[80px] lg:!w-full'} relative !inline-flex items-center justify-center h-[36px] lg:h-[46px]`}>
-							<ImageLoader
-								key={i}
-								src={item.logo}
-								alt={item.logo_alt}
-								width={110}
-								height={45}
-							/>
-						</div>
-					))}
-				</Slider>
-			)}
-		</>
+		<div
+			className={`marquee-mask relative w-full overflow-hidden ${
+				className ? className : ""
+			}`}>
+			<div className="flex w-max animate-marquee items-center gap-[56px] hover:[animation-play-state:paused]">
+				{loop.map((item: any, i: number) => (
+					<div
+						key={i}
+						aria-hidden={i >= logoSlider.length}
+						className="relative flex h-[40px] w-[120px] shrink-0 items-center justify-center opacity-60 grayscale transition-opacity duration-300 hover:opacity-100 hover:grayscale-0">
+						<ImageLoader
+							src={item.logo}
+							alt={item.logo_alt}
+							fill
+							sizes="120px"
+							className="object-contain"
+						/>
+					</div>
+				))}
+			</div>
+		</div>
 	);
 };
 

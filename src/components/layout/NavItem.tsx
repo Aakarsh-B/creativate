@@ -27,17 +27,17 @@ const NavItems = ({
 		}
 	}
 
-	const menuClassName = `${
-		pathname === extractPathFromUrl(route)
-			? "active max-lg:bg-[#161830] rounded-[4px]"
-			: ""
-	} group cursor-pointer tracking-wide ${
+	const isActive = pathname === extractPathFromUrl(route);
+
+	const menuClassName = `group cursor-pointer transition-all duration-300 ease-expo ${
 		!ctaMenu
-			? `shrink-0 lg:mr-[14px] xl:mr-[20px] last:mr-0 relative font-[500] text-[20px] leading-[22px] text-primaryLight`
-			: `bg-primaryBlue border-[2px] border-solid border-primaryBlue hover:opacity-75 flex items-center justify-center rounded-[8px] text-primaryLight text-center px-[10px] text-[24px] leading-[28px] xl:px-[20px] xl:text-[20px] xl:leading-[24px]  w-full h-[77px] xl:h-[45px]`
-	} cursor-pointer transition-all duration-300 ease-in-out capitalize ${
-		!footer ? "py-[16px] lg:py-0 text-center" : ""
-	} w-full lg:w-auto`;
+			? `relative shrink-0 rounded-full font-[500] text-[17px] lg:text-[15px] leading-[20px] ${
+					isActive
+						? "text-primaryLight bg-white/10"
+						: "text-primaryLight/70 hover:text-primaryLight hover:bg-white/[0.06]"
+			  } ${footer ? "" : "px-[16px] py-[14px] lg:py-[10px]"}`
+			: `inline-flex items-center justify-center gap-[8px] rounded-full bg-lime text-primaryDark font-[600] text-[17px] lg:text-[15px] leading-[20px] px-[22px] h-[56px] lg:h-[50px] hover:bg-primaryLight`
+	} ${!footer ? "text-center w-full lg:w-auto" : ""} ${className ? className : ""}`;
 
 	return (
 		<>
@@ -47,6 +47,11 @@ const NavItems = ({
 					className={`${menuClassName}`}
 					onClick={handleClick}>
 					{menuText}
+					{ctaMenu && (
+						<span className="inline-block transition-transform duration-300 ease-expo group-hover:translate-x-[2px] group-hover:-translate-y-[2px]">
+							↗
+						</span>
+					)}
 				</Link>
 			) : (
 				<>

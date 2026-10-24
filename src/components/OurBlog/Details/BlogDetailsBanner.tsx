@@ -16,7 +16,7 @@ const BlogDetailsBanner = ({ title, bannerImage }: any) => {
 				<span className="blog-banner absolute bottom-0 left-0 w-full h-full z-[1]" />
 			</div>
 			<div className="max-w-[600px] mt-[16px] lg:mt-0 md:px-[20px] lg:px-0 mx-auto md:max-w-full xl:max-w-[1024px] md:absolute md:bottom-[40px] md:left-1/2 md:-translate-x-1/2 w-full z-[1]">
-				<h2 className="text-[#F4F4F4] text-[32px] leading-[38px] font-[500] text-center lg:text-left lg:text-[40px] lg:leading-[48px] line-clamp-4">
+				<h2 className="text-[#F2F0EB] text-[32px] leading-[38px] font-[500] text-center lg:text-left lg:text-[40px] lg:leading-[48px] line-clamp-4">
 					{title}
 				</h2>
 			</div>

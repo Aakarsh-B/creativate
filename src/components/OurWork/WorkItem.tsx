@@ -1,8 +1,5 @@
-"use client";
-
 import ImageLoader from "@/utils/ImageLoader";
 import Link from "next/link";
-import { useEffect } from "react";
 
 const WorkItem = ({
 	featImage,
@@ -12,83 +9,41 @@ const WorkItem = ({
 	shortDesc,
 	className,
 }: any) => {
-	useEffect(() => {
-		if (document != undefined) {
-			document
-				.querySelectorAll(".workitem-wrap article")
-				.forEach((item: any) => {
-					const blogUrlElement =
-						item.querySelector(".workitem--blogurl");
-					if (blogUrlElement) {
-						blogUrlElement.addEventListener(
-							"mouseover",
-							(e: any) => {
-								e.target.parentElement.classList.add("hover");
-							}
-						);
-						blogUrlElement.addEventListener(
-							"mouseleave",
-							(e: any) => {
-								e.target.parentElement.classList.remove(
-									"hover"
-								);
-							}
-						);
-					}
-				});
-		}
-	}, []);
-
 	return (
-		<article
-			className={`max-w-[390px] mx-auto mb-[32px] md:mb-0 md:mx-0 md:max-w-[640px] md:max-h-[620px] px-0 md:p-[24px] lg:p-[40px] transition-all duration-300 ease-in-out relative w-full md:w-1/2 ${
-				className ? className : ""
-			}`}>
-			<div className="group/workItem workitem-wrapper relative">
-				<div className="relative pt-[58.2%] rounded-[12px] overflow-hidden imgloader z-0 imgloader">
-					<ImageLoader
-						src={featImage}
-						fill
-						alt={title}
-					/>
-				</div>
-				<Link
-					href={`/our-work/${blogLink}`}
-					className="absolute inset-0 w-full h-full z-[1] workitem--blogurl"
+		<article className={`group relative ${className ? className : ""}`}>
+			<Link
+				href={`/our-work/${blogLink}`}
+				className="relative block aspect-[16/11] overflow-hidden rounded-[24px] bg-surface imgloader">
+				<ImageLoader
+					src={featImage}
+					fill
+					sizes="(max-width: 768px) 100vw, 50vw"
+					alt={title}
+					className="object-cover transition-transform duration-[1.2s] ease-expo group-hover:scale-[1.04]"
 				/>
-				<div className="workitem--head flex items-center justify-between mt-[16px]">
-					<div className="flex flex-col">
-						<h4 className="text-[24px] leading-[28px] font-[500] lg:leading-[36px] text-[#E6E6E6] mb-[10px]">
-							{title}
-						</h4>
-						{websiteLink && (
-							<Link
-								href={websiteLink}
-								className="workitem--client-url px-[10px] py-[8px] lg:px-[14px] lg:py-[10px] group bg-[#191B35] rounded-[8px] hover:bg-[#0067FF] transition-all duration-300 ease-in-out z-[1]"
-								target="_blank">
-								<span className="text-[16px] leading-[20px] font-[400] opacity-50 text-[#E6E6E6] group-hover:opacity-100 transition-all duration-300 ease-in-out">
-									{websiteLink}
-								</span>
-							</Link>
-						)}
-					</div>
-					<Link
-						href={`/our-work/${blogLink}`}
-						className="workitem-blog-url w-[46px] h-[46px] lg:w-[54px] lg:h-[54px] flex items-center justify-center shrink-0 bg-[#191B35] group-[.hover]/workItem:bg-[#0067FF] transition-all duration-300 ease-in-out rounded-[8px]">
-						<ImageLoader
-							src={"/icons/external-link.svg"}
-							alt="external link"
-							width={17}
-							height={17}
-							className="w-[13px] h-[13px] md:w-[17px] md:h-[17px]"
+				<span className="absolute right-[16px] top-[16px] flex h-[48px] w-[48px] items-center justify-center rounded-full bg-primaryLight text-primaryDark opacity-0 -translate-y-[6px] transition-all duration-500 ease-expo group-hover:translate-y-0 group-hover:opacity-100 group-hover:rotate-45">
+					↗
+				</span>
+			</Link>
+			<div className="mt-[20px] flex items-start justify-between gap-[16px]">
+				<div>
+					<h3 className="text-[24px] leading-[1.15] font-[500] tracking-[-0.025em] text-primaryLight lg:text-[28px]">
+						<Link href={`/our-work/${blogLink}`}>{title}</Link>
+					</h3>
+					{shortDesc && (
+						<div
+							className="mt-[8px] line-clamp-2 text-[15px] leading-[1.5] text-primaryLight/55"
+							dangerouslySetInnerHTML={{ __html: shortDesc }}
 						/>
-					</Link>
+					)}
 				</div>
-				{shortDesc && (
-					<div
-						className="text-[16px] leading-[20px] font-[400] opacity-50 text-[#E6E6E6] mt-[16px] line-clamp-4 z-[0]"
-						dangerouslySetInnerHTML={{ __html: shortDesc }}
-					/>
+				{websiteLink && (
+					<Link
+						href={websiteLink}
+						target="_blank"
+						className="mt-[4px] shrink-0 rounded-full border border-white/15 px-[14px] py-[7px] text-[13px] text-primaryLight/70 transition-colors duration-300 hover:border-lime hover:text-lime">
+						Live site ↗
+					</Link>
 				)}
 			</div>
 		</article>

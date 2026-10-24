@@ -4,7 +4,7 @@ import FaqContact from "@/templates/Home/FaqContact";
 import HomeBanner from "@/components/Home/HomeBanner";
 import WhoWeAre from "@/components/WhoWeAre";
 import StepProcess from "@/components/common/StepProcess";
-import VerticalTabSliderStripe from "@/components/common/VerticalTabSliderStripe";
+import ServicesList from "@/components/Home/ServicesList";
 import type { Metadata } from "next";
 import { getContent } from "@/lib/content";
 
@@ -36,7 +36,7 @@ export default async function Home() {
 			/>
 			<WhoWeAre data={data?.who_we_are} />
 			<CultureParalax data={data?.our_culture} />
-			<VerticalTabSliderStripe
+			<ServicesList
 				data={data?.what_we_do}
 				sectionId={"service"}
 			/>
@@ -46,7 +46,6 @@ export default async function Home() {
 			<CustomerStories
 				data={data?.client_feedback}
 				sectionId={"story"}
-				logoSlider={data?.logo_slider}
 			/>
 			<FaqContact
 				sectionId={"contact-us"}

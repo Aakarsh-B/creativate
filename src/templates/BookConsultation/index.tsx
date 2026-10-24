@@ -264,12 +264,12 @@ function BookConsultation(props: any) {
 													onClick={() =>
 														handleClick(item.value)
 													}
-													className={`cursor-pointer p-[16px] sm:p-[20px] rounded-[8px] w-full h-full text-[20px] leading-[24px] text-[#F4F4F4] text-center font-[400] transition-all duration-[0.2s] ease-in ${
+													className={`cursor-pointer p-[16px] sm:p-[20px] rounded-[8px] w-full h-full text-[20px] leading-[24px] text-[#F2F0EB] text-center font-[400] transition-all duration-[0.2s] ease-in ${
 														activeItems.includes(
 															item.value
 														)
 															? "bg-primaryBlue"
-															: "bg-[#262849]"
+															: "bg-[#1C1C1F]"
 													}`}>
 													{item.name}
 												</div>
@@ -406,7 +406,7 @@ function BookConsultation(props: any) {
 												checked={isTermsChecked}
 												name="accepted_terms"
 												onChange={handleCheckboxChange}
-												className="peer cursor-pointer appearance-none relative h-[24px] w-[24px] bg-[#262849] border border-[#262849] transition-all checked:border-primaryBlue checked:bg-primaryBlue rounded-[6px]"
+												className="peer cursor-pointer appearance-none relative h-[24px] w-[24px] bg-[#1C1C1F] border border-[#1C1C1F] transition-all checked:border-primaryBlue checked:bg-primaryBlue rounded-[6px]"
 											/>
 											<div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white opacity-0 transition-opacity peer-checked:opacity-100">
 												<svg

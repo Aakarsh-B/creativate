@@ -1,87 +1,59 @@
 import SectionLayout from "@/templates/SectionLayout";
 import SectionTitle from "@/components/common/SectionTitle";
+import SectionLabel from "@/components/common/SectionLabel";
+import AnimateInView from "@/templates/animateInView";
 import React from "react";
-
-const GridBgGradient = [
-	"bg-[linear-gradient(91.94deg,#336CFB_0%,#11C3C1_100%)]",
-	"bg-[linear-gradient(91.94deg,#336CFB_0%,#11C3C1_100%)]",
-	"bg-[linear-gradient(91.94deg,#456FF1_0%,#EA88CE_100%)]",
-];
 
 interface ProcessItem {
 	title: string;
 	description: string;
 }
 
-interface ProcessGridProps {
-	data: ProcessItem;
-	className?: String;
-	bgGradient?: String;
-	animateDelay?: Number;
-}
-
 const StepProcess = ({ data, sectionId }: any) => {
-	const processItems = data.process_item_list;
-
-	const ProcessGrid: React.FC<ProcessGridProps> = ({
-		data,
-		bgGradient,
-		className,
-	}) => {
-		return (
-			<div
-				className={`max-lg:mb-[24px] px-[21px] pb-[32px] pt-[45px] md:px-[24px] md:pb-[35px] md:pt-[50px] bg-[#191B35] rounded-[8px] overflow-hidden relative ${
-					className ? className : ""
-				}`}>
-				<span
-					className={`absolute w-full h-[15px] top-0 right-0 left-0 ${
-						bgGradient ? bgGradient : ""
-					}`}
-				/>
-				<h4
-					className={`font-[400] text-primaryLight text-center text-[28px] leading-[34px] lg:text-[32px] lg:leading-[38px] mb-[16px] lg:mb-[20px]`}>
-					{data?.title}
-				</h4>
-				<p
-					className={`text-primaryLight font-normal text-[18px] leading-[22px] lg:text-[20px] lg:leading-[24px] text-center`}>
-					{data?.description}
-				</p>
-			</div>
-		);
-	};
+	const processItems: ProcessItem[] = Object.values(data?.process_item_list ?? {});
 
 	return (
-		<section
-			className={`py-[15px] pb-[40px] lg:pt-0 lg:pb-[120px] bg-primaryDark relative`}>
+		<section className={`relative bg-primaryDark py-[80px] lg:py-[140px]`}>
 			{sectionId && (
 				<span
 					id={sectionId}
 					className="targetCode"
 				/>
 			)}
-			<SectionLayout className={``}>
-				<div className={`mx-auto max-w-[450px] lg:max-w-[750px]`}>
-					<SectionTitle
-						className={`text-primaryLight !text-center mb-[30px] 2xl:mb-[40px]`}>
+			<SectionLayout>
+				<div className="mb-[48px] flex flex-col items-center gap-[20px] lg:mb-[72px] lg:items-start">
+					<SectionLabel index="03">How we work</SectionLabel>
+					<SectionTitle className={`text-primaryLight max-w-[760px]`}>
 						{data?.title}
 					</SectionTitle>
 				</div>
-				{Object.values(processItems)?.length > 0 && (
-					<div
-						className={`testing flex flex-col md:flex-row md:flex-wrap justify-between`}>
-						{Object.values(processItems).map(
-							(item: any, index: number) => (
-								<div
-									key={index}
-									className={`w-full max-md:max-w-[350px] md:w-[calc((100%_/_2)_-_20px)] max-lg:mx-auto lg:w-[calc((100%_/_3)_-_20px)]`}>
-									<ProcessGrid
-										data={item}
-										bgGradient={GridBgGradient[index]}
-										animateDelay={index}
-									/>
+				{processItems.length > 0 && (
+					<div className="grid grid-cols-1 gap-[12px] md:grid-cols-3 md:gap-[16px]">
+						{processItems.map((item, index) => (
+							<AnimateInView
+								key={index}
+								reset={false}
+								animation={"translateFromBottom"}
+								delay={index * 0.08}
+								className="h-full">
+								<div className="group relative flex h-full min-h-[300px] flex-col justify-between overflow-hidden rounded-[24px] border border-white/[0.08] bg-surface p-[28px] transition-colors duration-500 ease-expo hover:border-lime/40 lg:min-h-[380px] lg:p-[36px]">
+									<span className="absolute -right-[10px] -top-[40px] select-none text-[180px] leading-none font-[600] tracking-[-0.06em] text-white/[0.04] transition-colors duration-500 group-hover:text-lime/10">
+										{index + 1}
+									</span>
+									<span className="flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white/[0.06] text-[14px] font-[600] text-lime">
+										0{index + 1}
+									</span>
+									<div className="relative">
+										<h3 className="mb-[12px] text-[28px] leading-[1.1] font-[500] tracking-[-0.03em] text-primaryLight lg:text-[34px]">
+											{item?.title}
+										</h3>
+										<p className="whitespace-pre-line text-[16px] leading-[1.55] text-primaryLight/60">
+											{item?.description}
+										</p>
+									</div>
 								</div>
-							)
-						)}
+							</AnimateInView>
+						))}
 					</div>
 				)}
 			</SectionLayout>

@@ -23,8 +23,8 @@ const ClientDetCard = ({ type, title }: any) => {
 			head = "Service";
 	}
 	return (
-		<div className="relative px-[24px] py-[12px] w-auto md:px-[30px] md:py-[20px] md:max-w-[calc(50%_-_12px)] md:w-full xl:max-w-1/4 xl:w-auto mx-auto md:mx-0 rounded-[8px] text-[#F4F4F4] inline-flex md:flex md:flex-col text-center md:text-left overflow-hidden">
-			<span className="bg-[rgba(25,_27,_53,_0.5)] absolute inset-0 w-full h-full z-0 backdrop-blur-[8px]" />
+		<div className="relative px-[24px] py-[12px] w-auto md:px-[30px] md:py-[20px] md:max-w-[calc(50%_-_12px)] md:w-full xl:max-w-1/4 xl:w-auto mx-auto md:mx-0 rounded-[8px] text-[#F2F0EB] inline-flex md:flex md:flex-col text-center md:text-left overflow-hidden">
+			<span className="bg-[rgba(20,_20,_22,_0.6)] absolute inset-0 w-full h-full z-0 backdrop-blur-[8px]" />
 			<h5 className="text-[16px] leading-[24px] font-[600] md:text-[18px] md:leading-[24px] md:mb-[10px] mr-[8px] md:mr-0 z-[1]">
 				{head}
 			</h5>
@@ -49,7 +49,7 @@ const WorkDetailsBanner = ({ title, bannerImage, clientDetails }: any) => {
 				/>
 			</div>
 			<div className="max-w-[600px] mt-[16px] lg:mt-0 md:px-[20px] lg:px-0 mx-auto md:max-w-full xl:max-w-[1024px] md:absolute md:-bottom-[20%] xl:bottom-[-50px] md:left-1/2 md:-translate-x-1/2 w-full">
-				<h2 className="text-[#F4F4F4] text-[32px] leading-[38px] font-[500] text-center lg:text-left lg:text-[40px] lg:leading-[48px] line-clamp-4">
+				<h2 className="text-[#F2F0EB] text-[32px] leading-[38px] font-[500] text-center lg:text-left lg:text-[40px] lg:leading-[48px] line-clamp-4">
 					{title}
 				</h2>
 				<div className="flex flex-col md:flex-row justify-start flex-wrap gap-[16px] md:gap-[24px] mt-[16px] md:mt-[24px] lg:mt-[32px]">

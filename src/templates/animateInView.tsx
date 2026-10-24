@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
-import { motion, stagger, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 interface AnimateInViewProps {
 	children: React.ReactNode;
@@ -25,14 +25,12 @@ const AnimateInView: React.FC<AnimateInViewProps> = ({
 	className,
 }) => {
 	const ref = useRef(null);
-	const isInView = useInView(ref, { once: !reset });
+	const isInView = useInView(ref, { once: !reset, amount: 0.15 });
 
 	// ANIMATION TYPES
 	const spring = {
-		type: "spring",
-		damping: 10,
-		stiffness: 100,
-		duration: 0.5,
+		duration: 0.9,
+		ease: [0.16, 1, 0.3, 1],
 		delay: delay,
 	};
 
@@ -56,7 +54,7 @@ const AnimateInView: React.FC<AnimateInViewProps> = ({
 				};
 			case "translateFromBottom":
 				return {
-					initial: { y: "7%", opacity: 0 },
+					initial: { y: 28, opacity: 0 },
 					animate: { y: 0, opacity: 1 },
 				};
 			case "zoomInCenter":
@@ -79,19 +77,17 @@ const AnimateInView: React.FC<AnimateInViewProps> = ({
 
 	const { initial, animate } = getPositionValues(animation);
 
+	// Children always render (so content is in the server HTML); only the
+	// entrance motion waits until the block scrolls into view.
 	return (
-		<div
+		<motion.div
 			ref={ref}
-			className={className ? className : ""}>
-			{isInView && (
-				<motion.div
-					initial={initial}
-					animate={animate}
-					transition={spring}>
-					{children}
-				</motion.div>
-			)}
-		</div>
+			className={className ? className : ""}
+			initial={initial}
+			animate={isInView ? animate : initial}
+			transition={spring}>
+			{children}
+		</motion.div>
 	);
 };
 

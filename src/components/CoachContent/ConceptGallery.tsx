@@ -24,7 +24,7 @@ const ConceptGallery = ({ data }: any) => {
 					{data?.items?.map((item: any, index: number) => (
 						<article
 							key={item.name}
-							className="bg-[#191B35] rounded-[8px] overflow-hidden relative flex flex-col">
+							className="bg-[#141416] rounded-[8px] overflow-hidden relative flex flex-col">
 							<span
 								className={`absolute w-full h-[10px] top-0 right-0 left-0 z-[2] ${CardGradient[index % CardGradient.length]}`}
 							/>

@@ -4,7 +4,7 @@ const ActionMenuList = ({ data }: any) => {
 	return (
 		<>
 			{data?.length > 0 && (
-				<nav className="flex flex-col md:flex-row items-center justify-center">
+				<nav className="flex flex-col lg:flex-row items-center justify-center gap-[8px] w-full">
 					{data?.map((item: any) => (
 						<NavItems
 							key={item.menu_label}

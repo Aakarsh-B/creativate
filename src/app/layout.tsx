@@ -1,7 +1,7 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import "~scss/style.scss";
-import { glacialIndifference, poppins } from "@/assets/fonts/fonts";
+import { sans, serif } from "@/assets/fonts/fonts";
 import Script from 'next/script';
 
 
@@ -31,7 +31,7 @@ export default function RootLayout({
 			`}
 		  	</Script>
 			<body
-				className={`${poppins.variable} ${glacialIndifference.variable}`}>
+				className={`${sans.variable} ${serif.variable} bg-primaryDark text-primaryLight antialiased`}>
 				<Header />
 				<main className="">{children}</main>
 				<Footer />

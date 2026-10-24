@@ -1,16 +1,19 @@
-import { Poppins } from "next/font/google";
-import localFont from 'next/font/local'
+import { Inter_Tight, Instrument_Serif } from "next/font/google";
 
-const poppins = Poppins({
+const sans = Inter_Tight({
     subsets: ["latin"],
     display: "swap",
-    weight: ["400", "500", "600", "700", "800", "900"],
-    variable: '--font-poppins'
+    weight: ["300", "400", "500", "600", "700"],
+    variable: '--font-sans'
 });
 
-const glacialIndifference = localFont({
-    src: './glacialIndifference-Regular.otf',
-    variable: '--font-glacial-regular',
-})
+// Used sparingly for italic accent words in headlines
+const serif = Instrument_Serif({
+    subsets: ["latin"],
+    display: "swap",
+    weight: ["400"],
+    style: ["normal", "italic"],
+    variable: '--font-serif'
+});
 
-export { poppins, glacialIndifference }
+export { sans, serif }

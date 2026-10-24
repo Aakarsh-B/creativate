@@ -1,128 +1,72 @@
-"use client";
-
 import SectionLayout from "@/templates/SectionLayout";
 import React from "react";
 import SectionTitle from "./common/SectionTitle";
+import SectionLabel from "./common/SectionLabel";
 import Link from "next/link";
 import CustomerStoryCard from "./common/CustomerStoryCard";
-import Slider from "react-slick";
-import ImageLoader from "@/utils/ImageLoader";
-import { CustomerStoryCardProps } from "@/lib/types";
-import LogoSlider from "./common/LogoSlider";
-import AnimateInView from "@/templates/animateInView";
 
-const CustomerStories = ({ data, sectionId, logoSlider }: any) => {
-	const SampleNextArrow = (props: any) => {
-		const { className, onClick } = props;
-		return (
-			<div
-				className={className}
-				onClick={onClick}>
-				<ImageLoader
-					src="./icons/slider-arrow-icon.svg"
-					alt="arrow icon"
-					className="z-[1]"
-					width={16}
-					height={14}
-				/>
-			</div>
-		);
-	};
-
-	const SamplePrevArrow = (props: any) => {
-		const { className, onClick } = props;
-		return (
-			<div
-				className={className}
-				onClick={onClick}>
-				<ImageLoader
-					src="./icons/slider-arrow-icon.svg"
-					alt="arrow icon"
-					className="z-[1]"
-					width={16}
-					height={14}
-				/>
-			</div>
-		);
-	};
-
-	var settings = {
-		dots: false,
-		arrows: false,
-		infinite: true,
-		speed: 500,
-		slidesToShow: 2,
-		slidesToScroll: 1,
-		responsive: [
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1,
-					arrows: true,
-				},
-			},
-		],
-		prevArrow: <SamplePrevArrow />,
-		nextArrow: <SampleNextArrow />,
-	};
+const CustomerStories = ({ data, sectionId }: any) => {
+	// The CMS list repeats entries to pad the old carousel; show each review once
+	const reviews = (data?.review_slider ?? []).filter(
+		(item: any, index: number, all: any[]) =>
+			all.findIndex(
+				(other) =>
+					other.user_name === item.user_name &&
+					other.review_desc === item.review_desc
+			) === index
+	);
 
 	return (
-		<section className={`py-[40px] xl:py-[100px] bg-primaryBlue relative`}>
+		<section className="relative bg-primaryLight py-[80px] text-primaryDark lg:py-[140px]">
 			{sectionId && (
 				<span
 					id={sectionId}
 					className="targetCode"
 				/>
 			)}
-			<SectionLayout
-				className={`flex flex-col lg:flex-row justify-between`}>
-				<div className="w-full max-md:max-w-[350px] max-md:mx-auto lg:w-1/2 lg:max-w-[555px] text-center mb-[16px] md:mb-[32px] lg:mb-0 lg:flex lg:flex-col justify-between">
-					<SectionTitle className={`text-primaryLight`}>
-						{data?.title}
-					</SectionTitle>
+			<SectionLayout>
+				<div className="mb-[48px] grid grid-cols-1 gap-[24px] lg:mb-[64px] lg:grid-cols-12 lg:items-end">
+					<div className="lg:col-span-7">
+						<div className="mb-[20px] flex justify-center lg:justify-start">
+							<SectionLabel
+								index="04"
+								className="!text-primaryDark/50 [&>span:nth-child(2)]:!text-primaryDark/30">
+								Client love
+							</SectionLabel>
+						</div>
+						<SectionTitle className="text-primaryDark">
+							{data?.title}
+						</SectionTitle>
+					</div>
+					<div className="flex flex-col items-center gap-[20px] lg:col-span-5 lg:items-start">
+						<p className="text-center text-[17px] leading-[1.55] text-primaryDark/60 lg:text-left">
+							{data?.description}
+						</p>
+						{data?.button_link && (
+							<Link
+								href={data?.button_link}
+								className="group inline-flex h-[52px] items-center gap-[10px] rounded-full bg-primaryDark px-[24px] text-[15px] font-[600] text-primaryLight transition-colors duration-300 hover:bg-primaryBlue">
+								{data?.button_text}
+								<span className="transition-transform duration-300 ease-expo group-hover:rotate-45">
+									↗
+								</span>
+							</Link>
+						)}
+					</div>
 				</div>
-				<div className="w-full max-md:max-w-[350px] max-lg:max-w-[600px] max-lg:mx-auto lg:w-1/2">
-					<p className="text-[20px] leading-[24px] text-primaryLight font-[400] text-center lg:text-[24px] lg:leading-[28px] lg:text-right">
-						{data?.description}
-					</p>
-					<Link
-						href={data?.button_link}
-						className="text-[20px] leading-[24px] text-primaryLight font-[400] text-center lg:text-426px] lg:leading-282px] lg:text-right mt-[10px] lg:mt-[16px] flex items-center justify-center lg:justify-end underline transition-all duration-300 ease-linear">
-						{data?.button_text}
-						<ImageLoader
-							src={"./icons/external-link.svg"}
-							alt="external link"
-							width={8}
-							height={8}
-							className="ml-[8px] md:w-[12px] md:h-[12px]"
+
+				<div className="grid grid-cols-1 gap-[12px] md:grid-cols-2 md:gap-[16px]">
+					{reviews.map((item: any, index: number) => (
+						<CustomerStoryCard
+							key={index}
+							content={item.review_desc}
+							name={item.user_name}
+							designation={item.user_title}
+							profileImg={item.user_image}
+							logo={item.logo_image}
+							logoAlt={item.logo_alt || item.user_name}
 						/>
-					</Link>
-				</div>
-			</SectionLayout>
-			<SectionLayout className={`customer-stories mt-[40px]`}>
-				<Slider {...settings}>
-					{data?.review_slider.length > 2 &&
-						data?.review_slider.map((item: any, index: number) => (
-							<CustomerStoryCard
-								key={index}
-								content={item.review_desc}
-								name={item.user_name}
-								designation={item.user_title}
-								profileImg={item.user_image}
-								logo={item.logo_image}
-								logoAlt={item.user_name}
-							/>
-						))}
-				</Slider>
-				<div className="h-[46px] relative mt-[20px] opacity-50">
-					<LogoSlider
-						desktopView={6}
-						mobileView={2}
-						logoSlider={logoSlider}
-						customerStories={true}
-					/>
-					<span />
+					))}
 				</div>
 			</SectionLayout>
 		</section>

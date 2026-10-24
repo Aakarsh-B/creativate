@@ -67,15 +67,16 @@ const FormFields = () => {
 
 	if (state.succeeded) {
 		return (
-			<p className="p-[20px_15px] rounded-[6px] bg-primaryBlue text-primaryDark text-[20px] leading-[24px] font-bold text-center block mt-[40px]">
+			<p className="block rounded-[16px] bg-lime p-[20px] text-center text-[18px] leading-[24px] font-[600] text-primaryDark">
 				Our team will contact you soon.
 			</p>
 		);
 	}
 
-	const inputWrap = `w-full lg:max-h-[64px] transition-all duration-300 ease-in-out relative mb-[24px] md:mb-[30px]`;
-	const inputField = `bg-[#262849] px-[32px] py-[24px] md:py-[20px] rounded-[8px] w-full h-full text-[20px] leading-[24px] text-primaryLight font-[400]`;
-	const errorMsg = `text-[14px] leading-[20px] lg:text-[16px] lg:leading-[24px] text-red-600 font-bold transition-all duration-300 ease-in-out`;
+	const inputWrap = `w-full relative mb-[12px]`;
+	const inputField = `w-full h-full rounded-[16px] border border-white/[0.08] bg-primaryDark/60 px-[20px] py-[16px] text-[16px] leading-[24px] text-primaryLight placeholder:text-primaryLight/35 outline-none transition-colors duration-300 focus:border-lime/60`;
+	const errorMsg = `mt-[6px] pl-[4px] text-[13px] leading-[18px] text-[#FF7A7A] font-[500]`;
+	const submitBtn = `mt-[8px] inline-flex h-[56px] w-full items-center justify-center gap-[10px] rounded-full text-[16px] font-[600] transition-all duration-300 ease-expo`;
 
 	// http://www.egov.local/wp-json/contact-form-7/v1/contact-forms/12/feedback/
 
@@ -83,7 +84,7 @@ const FormFields = () => {
 		<>
 			<form
 				onSubmit={handleSubmit}
-				className="mt-[10px] md:mt-[20px]">
+				className="">
 				<div className={`${inputWrap}`}>
 					<input
 						id="fullName"
@@ -120,23 +121,24 @@ const FormFields = () => {
 						<p className={`${errorMsg}`}>{errors.email}</p>
 					)}
 				</div>
-				<div className={`${inputWrap} min-h-[124px]`}>
+				<div className={`${inputWrap}`}>
 					<textarea
 						id="message"
-						className={`${inputField} h-full w-full min-h-[124px]`}
+						className={`${inputField} min-h-[132px] resize-none`}
 						name="message"
 						placeholder="Message"
 					/>
 				</div>
 				{isValid ? (
 					<button
-						className="text-[24px] leading-[30px] md:text-[26px] md:leading-[32px] font-[400] text-center w-full max-h-[80px] rounded-[8px] px-[15px] py-[10px] md:px-[25px] md:py-[15px] bg-primaryBlue text-primaryLight break-words max-lg:mx-auto"
-						type="submit">
-						Send
+						className={`${submitBtn} bg-lime text-primaryDark hover:bg-primaryLight`}
+						type="submit"
+						disabled={state.submitting}>
+						{state.submitting ? "Sending…" : "Send message ↗"}
 					</button>
 				) : (
-					<p className="text-[24px] leading-[30px] md:text-[26px] md:leading-[32px] font-[400] text-center w-full max-h-[80px] rounded-[8px] px-[15px] py-[10px] md:px-[25px] md:py-[15px] bg-primaryBlue text-primaryLight break-words max-lg:mx-auto">
-						Send
+					<p className={`${submitBtn} bg-white/[0.06] text-primaryLight/40 cursor-not-allowed`}>
+						Send message ↗
 					</p>
 				)}
 			</form>

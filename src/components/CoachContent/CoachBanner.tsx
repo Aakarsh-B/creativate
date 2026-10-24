@@ -13,10 +13,7 @@ const CoachBanner = ({ data }: any) => {
 	return (
 		<SectionLayout className={``}>
 			<div
-				className={`px-[20px] pt-[37px] pb-[30px] lg:px-[64px] lg:py-[56px] bg-[#191B35] rounded-[8px] overflow-hidden relative flex flex-col lg:flex-row lg:items-center gap-[36px] lg:gap-[48px]`}>
-				<span
-					className={`absolute w-full h-[15px] top-0 right-0 left-0 bg-[linear-gradient(91.94deg,#336CFB_0%,#11C3C1_100%)]`}
-				/>
+				className={`pt-[10px] lg:pt-[20px] relative flex flex-col lg:flex-row lg:items-center gap-[36px] lg:gap-[48px]`}>
 				<div className="w-full lg:w-[52%] text-center lg:text-left">
 					<p className="font-poppins text-primaryBlue font-[600] uppercase tracking-[0.12em] text-[13px] leading-[18px] mb-[14px]">
 						{data?.eyebrow}

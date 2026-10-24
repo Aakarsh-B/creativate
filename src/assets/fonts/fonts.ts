@@ -13,7 +13,9 @@ const serif = Instrument_Serif({
     display: "swap",
     weight: ["400"],
     style: ["normal", "italic"],
-    variable: '--font-serif'
+    variable: '--font-serif',
+    // Next 14.1 has no fallback metrics for this font; skip the adjustment
+    adjustFontFallback: false
 });
 
 export { sans, serif }

@@ -122,9 +122,8 @@ const CoachPricing = ({ pricing, templatePack, bookingLink }: any) => {
 				</div>
 
 				{templatePack && (
-					<div className="mt-[50px] lg:mt-[80px] bg-[#191B35] rounded-[8px] overflow-hidden relative flex flex-col lg:flex-row">
-						<span className="absolute w-full h-[10px] top-0 right-0 left-0 z-[2] bg-[linear-gradient(91.94deg,#456FF1_0%,#EA88CE_100%)]" />
-						<div className="relative w-full lg:w-[48%] aspect-[4/3] shrink-0">
+					<div className="mt-[50px] lg:mt-[80px] relative flex flex-col lg:flex-row lg:items-center gap-[28px] lg:gap-[56px]">
+						<div className="relative w-full lg:w-[48%] aspect-[4/3] shrink-0 rounded-[8px] overflow-hidden">
 							<ImageLoader
 								src={templatePack.image}
 								fill
@@ -133,7 +132,7 @@ const CoachPricing = ({ pricing, templatePack, bookingLink }: any) => {
 								className="object-cover"
 							/>
 						</div>
-						<div className="px-[24px] py-[32px] lg:px-[48px] lg:py-[48px] flex flex-col justify-center text-center lg:text-left">
+						<div className="flex flex-col justify-center text-center lg:text-left">
 							<p className="font-poppins text-primaryBlue font-[600] uppercase tracking-[0.12em] text-[14px] leading-[20px] mb-[12px]">
 								{templatePack.eyebrow}
 							</p>

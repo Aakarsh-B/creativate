@@ -33,7 +33,7 @@ const NavItems = ({
 			: ""
 	} group cursor-pointer tracking-wide ${
 		!ctaMenu
-			? `shrink-0 lg:mr-[20px] last:mr-0 relative font-[500] text-[20px] leading-[22px] text-primaryLight`
+			? `shrink-0 lg:mr-[14px] xl:mr-[20px] last:mr-0 relative font-[500] text-[20px] leading-[22px] text-primaryLight`
 			: `bg-primaryBlue border-[2px] border-solid border-primaryBlue hover:opacity-75 flex items-center justify-center rounded-[8px] text-primaryLight text-center px-[10px] text-[24px] leading-[28px] xl:px-[20px] xl:text-[20px] xl:leading-[24px]  w-full h-[77px] xl:h-[45px]`
 	} cursor-pointer transition-all duration-300 ease-in-out capitalize ${
 		!footer ? "py-[16px] lg:py-0 text-center" : ""

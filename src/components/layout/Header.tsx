@@ -17,7 +17,7 @@ const Header = async () => {
 			<div className="w-[88%] max-w-[1280px] mx-auto flex items-center justify-between h-full">
 				<div className="flex items-center justify-between">
 					<Logo />
-					<div className="hidden lg:flex items-center justify-end">
+					<div className="hidden lg:flex items-center justify-end lg:ml-[8px] lg:mr-[20px]">
 						{data?.header_left_menu.length > 0 &&
 							data?.header_left_menu.map((item: any) => (
 								<NavItems

@@ -52,6 +52,13 @@
         {
           "target_stripe": false,
           "ctamenu": false,
+          "menu_label": "Coach Content",
+          "route_link": "https://www.creativate.in/coach-content",
+          "target_id": "coach-content"
+        },
+        {
+          "target_stripe": false,
+          "ctamenu": false,
           "menu_label": "Blog",
           "route_link": "https://www.creativate.in/our-blog",
           "target_id": "our-blog"

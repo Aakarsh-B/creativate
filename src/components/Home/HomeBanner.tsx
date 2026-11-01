@@ -81,7 +81,7 @@ const HomeBanner = ({ data, logoSlider }: { data: any; logoSlider: any }) => {
 										priority={index === 0}
 										className="object-cover transition-transform duration-[1.2s] ease-expo group-hover:scale-[1.04]"
 									/>
-									<span className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-black/0" />
+									<span className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
 									<div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-[18px] md:p-[24px]">
 										<div>
 											<p className="text-[20px] font-[500] tracking-[-0.02em] text-primaryLight md:text-[24px]">

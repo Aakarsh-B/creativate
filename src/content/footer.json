@@ -34,19 +34,19 @@
       "footer_top_menu": [
         {
           "menu_label": "Work",
-          "route_link": "our-work",
+          "route_link": "/our-work",
           "target_id": "our-work",
           "target_stripe": false
         },
         {
           "menu_label": "Services",
-          "route_link": "https://www.creativate.in/#service",
+          "route_link": "/#service",
           "target_id": "services",
           "target_stripe": false
         },
         {
           "menu_label": "Blog",
-          "route_link": "our-blog",
+          "route_link": "/our-blog",
           "target_id": "our-blog",
           "target_stripe": false
         }

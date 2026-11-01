@@ -287,21 +287,21 @@
             "project_title": "Travel Memories",
             "project_image": "/wp-content/uploads/2024/03/travel-memories-1.jpg",
             "project_image_alt": "travel memories thumbnail",
-            "project_link": "https://www.creativate.in/our-work/travel-memories",
+            "project_link": "/our-work/travel-memories",
             "link_label": "View Project"
           },
           {
-            "project_title": "Education Today",
-            "project_image": "/wp-content/uploads/2024/05/Education-Today.jpg",
-            "project_image_alt": "education today thumbnail",
-            "project_link": "https://www.creativate.in/our-work/education-today-online",
+            "project_title": "Aveonix",
+            "project_image": "/wp-content/uploads/2025/04/Aveonix.jpg",
+            "project_image_alt": "Aveonix website shown on a monitor",
+            "project_link": "/our-blog/aveonix-website-redesign",
             "link_label": "View Project"
           },
           {
             "project_title": "Galeno Hygiene",
-            "project_image": "/wp-content/uploads/2024/04/Galeno-Hygiene.jpg",
-            "project_image_alt": "Galeno Hygiene thumbnail",
-            "project_link": "https://www.creativate.in/our-work/galeno-hygiene",
+            "project_image": "/wp-content/uploads/2024/05/colors-4-2.jpg",
+            "project_image_alt": "Galeno Hygiene brand photography",
+            "project_link": "/our-work/galeno-hygiene",
             "link_label": "View Project"
           }
         ]
@@ -323,27 +323,27 @@
             "title": "Logo Design & Branding",
             "description": "Create an unforgettable identity that reflects your brand’s spirit.",
             "project_title": "Travel Memories",
-            "project_image": "/wp-content/uploads/2024/03/travel-memories.jpg",
+            "project_image": "/wp-content/uploads/2024/05/TMFeature-image.jpg",
             "project_image_alt": "Travel Memories",
-            "project_link": "https://www.creativate.in/our-work/travel-memories",
+            "project_link": "/our-work/travel-memories",
             "link_label": "View Project"
           },
           {
             "title": "UI/UX Design",
             "description": "Creating user-friendly and visually appealing websites.",
             "project_title": "Galeno Hygiene",
-            "project_image": "/wp-content/uploads/2024/04/Galeno-Hygiene.jpg",
+            "project_image": "/wp-content/uploads/2024/05/colors-1.jpg",
             "project_image_alt": "galeno hygiene thumbnail",
-            "project_link": "https://www.creativate.in/our-work/galeno-hygiene",
+            "project_link": "/our-work/galeno-hygiene",
             "link_label": "View Project"
           },
           {
             "title": "Web Development",
             "description": "Build dynamic, responsive websites that captivate the audience and dominate the digital realm.",
             "project_title": "Education Today Online",
-            "project_image": "/wp-content/uploads/2024/05/Education-Today.jpg",
+            "project_image": "/wp-content/uploads/2024/05/Feature-image-1.jpg",
             "project_image_alt": "View Project",
-            "project_link": "https://www.creativate.in/our-work/education-today-online",
+            "project_link": "/our-work/education-today-online",
             "link_label": "View Project"
           },
           {

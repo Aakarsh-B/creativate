@@ -16,18 +16,7 @@ const NavItems = ({
 }: NavItemsParams) => {
 	const pathname = usePathname();
 
-	function extractPathFromUrl(url: any) {
-		// Regular expression to match the path after the domain
-		const pathRegex = /(?:https?:\/\/)?[^\/]+(.+)/;
-		const match = url.match(pathRegex);
-		if (match && match[1]) {
-			return match[1];
-		} else {
-			return null;
-		}
-	}
-
-	const isActive = pathname === extractPathFromUrl(route);
+	const isActive = pathname === route;
 
 	const menuClassName = `group cursor-pointer transition-all duration-300 ease-expo ${
 		!ctaMenu

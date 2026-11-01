@@ -33,11 +33,11 @@ const config: Config = {
 				'50%': { opacity: '0.4', transform: 'scale(0.8)' },
 			},
 		},
-		backgroundImage: {
-			cardBg: 'linear-gradient(331deg, rgba(20,42,76,1) 0%, rgba(60,60,105,1) 35%, rgba(76,117,175,1) 100%)',
-			bannerStackBottomBg: 'linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.75) 25%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.4) 75%, rgba(0,0,0,0) 100%)'
-		},
 		extend: {
+			backgroundImage: {
+				cardBg: 'linear-gradient(331deg, rgba(20,42,76,1) 0%, rgba(60,60,105,1) 35%, rgba(76,117,175,1) 100%)',
+				bannerStackBottomBg: 'linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.75) 25%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.4) 75%, rgba(0,0,0,0) 100%)'
+			},
 			fontFamily: {
 				sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
 				serif: ['var(--font-serif)', 'Georgia', 'serif'],

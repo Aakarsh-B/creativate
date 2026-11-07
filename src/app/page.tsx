@@ -7,17 +7,18 @@ import StepProcess from "@/components/common/StepProcess";
 import ServicesList from "@/components/Home/ServicesList";
 import type { Metadata } from "next";
 import { getContent } from "@/lib/content";
+import { pageMetadata } from "@/lib/seo";
 
 export async function generateMetadata(): Promise<Metadata> {
 	const pageData = await getContent(`/pages?slug=home&acf_format=standard`);
 
-	return {
-		title: pageData[0]?.acf?.metadata?.title ?? "Creativate",
-		description:
-			pageData[0]?.acf?.metadata?.description ??
-			"Creativity and innonvation for Unstoppable Growth.",
-		keywords: pageData[0]?.acf?.metadata?.keywords ?? "Creativity",
-	};
+	const meta = pageData[0]?.acf?.metadata;
+
+	return pageMetadata({
+		title: meta?.title,
+		description: meta?.description,
+		path: "/",
+	});
 }
 
 async function getData() {

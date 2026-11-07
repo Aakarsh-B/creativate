@@ -39,28 +39,28 @@
           "target_stripe": false,
           "ctamenu": false,
           "menu_label": "Work",
-          "route_link": "https://www.creativate.in/our-work",
+          "route_link": "/our-work",
           "target_id": "our-work"
         },
         {
           "target_stripe": false,
           "ctamenu": false,
           "menu_label": "Services",
-          "route_link": "https://www.creativate.in/#service",
+          "route_link": "/#service",
           "target_id": "service"
         },
         {
           "target_stripe": false,
           "ctamenu": false,
           "menu_label": "Coach Content",
-          "route_link": "https://www.creativate.in/coach-content",
+          "route_link": "/coach-content",
           "target_id": "coach-content"
         },
         {
           "target_stripe": false,
           "ctamenu": false,
           "menu_label": "Blog",
-          "route_link": "https://www.creativate.in/our-blog",
+          "route_link": "/our-blog",
           "target_id": "our-blog"
         }
       ],
@@ -69,7 +69,7 @@
           "target_stripe": false,
           "cta_menu": false,
           "menu_label": "Contact Us",
-          "route_link": "https://www.creativate.in/#contact-us",
+          "route_link": "/#contact-us",
           "target_id": "contact-us"
         },
         {

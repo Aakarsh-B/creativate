@@ -1,5 +1,6 @@
 import FaqList from "@/components/common/FaqList";
 import ContactForm from "@/components/common/ContactForm";
+import SectionLayout from "@/templates/SectionLayout";
 
 const FaqContact = ({
 	questionsList,
@@ -13,27 +14,26 @@ const FaqContact = ({
 	social_links: any;
 }) => {
 	return (
-		<section className={`py-[50px] lg:py-[100px] bg-primaryDark relative`}>
+		<section className={`relative bg-primaryDark py-[80px] lg:py-[140px]`}>
 			{sectionId && (
 				<span
 					id={sectionId}
 					className="targetCode top-[-45px]"
 				/>
 			)}
-			<div
-				className={`sm:w-[88%] max-w-[360px] lg:max-w-[1280px] mx-auto relative faqContact-wrap flex flex-col lg:flex-row justify-between`}>
+			<SectionLayout className="grid grid-cols-1 gap-[56px] lg:grid-cols-12 lg:gap-[48px]">
 				<FaqList
 					title={questionsList.title}
 					desc={questionsList.description}
 					faqList={questionsList.question_answer_list}
-					className={`faqList-wrap`}
+					className={`lg:col-span-7`}
 				/>
 				<ContactForm
 					formData={contactForm}
 					social_links={social_links}
-					className={`contactForm-wrap mt-[50px] lg:mt-0 lg:pl-[20px] 2xl:pl-[50px] max-lg:pt-[40px] max-lg:mb-[24px] `}
+					className={`lg:col-span-5`}
 				/>
-			</div>
+			</SectionLayout>
 		</section>
 	);
 };

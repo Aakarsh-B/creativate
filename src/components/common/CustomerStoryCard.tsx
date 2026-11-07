@@ -11,42 +11,46 @@ const CustomerStoryCard: React.FC<CustomerStoryCardProps> = ({
 	logoAlt,
 }) => {
 	return (
-		<div className="bg-primaryLight px-[16px] py-[32px] lg:px-[40px] lg:py-[32px] md:min-h-[240px] max-w-[450px] lg:max-w-full flex flex-col justify-between rounded-[16px] mx-[10px]">
-			<p className="text-[16px] leading-[24px] lg:text-[20px] text-primaryDark font-[400] text-left transition-all duration-300 ease-in-out mb-[56px] md:mb-[32px] line-clamp-5">
-				{content}
-			</p>
-			<div className="flex items-start flex-col lg:items-center lg:flex-row justify-between w-full">
-				<div className="flex items-center justify-start w-full md:max-w-1/2">
-					<div className="w-[49px] h-[49px] md:w-[56px] md:h-[56px] rounded-full overflow-hidden border-[3px] border-solid border-[#EEF5FF] relative">
+		<figure className="flex h-full flex-col justify-between gap-[40px] rounded-[24px] bg-white p-[28px] shadow-[0_1px_0_rgba(10,10,11,0.06)] lg:p-[40px]">
+			<div>
+				<span className="accent block text-[72px] leading-[0.6] text-primaryBlue">
+					“
+				</span>
+				<blockquote className="mt-[12px] text-[20px] leading-[1.4] font-[400] tracking-[-0.015em] text-primaryDark lg:text-[26px]">
+					{content}
+				</blockquote>
+			</div>
+			<figcaption className="flex items-center justify-between gap-[16px] border-t border-primaryDark/10 pt-[24px]">
+				<div className="flex items-center gap-[12px]">
+					<div className="relative h-[48px] w-[48px] shrink-0 overflow-hidden rounded-full bg-primaryLight">
 						<ImageLoader
 							src={profileImg}
 							fill
+							sizes="48px"
 							className={`object-cover`}
 							alt={name ? name : "user profile image"}
 						/>
 					</div>
-					<div className="ml-[12px]">
-						<p
-							className={`text-[20px] leading-[24px] text-primaryDark font-[400] text-left line-clamp-1`}>
+					<div>
+						<p className="text-[16px] leading-[20px] font-[600] text-primaryDark">
 							{name}
 						</p>
-						<p
-							className={`text-[16px] leading-[20px] text-primaryDark font-[400] text-left mt-[5px] opacity-50 line-clamp-1`}>
+						<p className="mt-[2px] text-[14px] leading-[18px] text-primaryDark/50">
 							{designation}
 						</p>
 					</div>
 				</div>
-				<div className="max-lg:mt-[20px] relative">
+				<div className="relative h-[36px] w-[110px] shrink-0">
 					<ImageLoader
 						src={logo}
-						height={155}
-						width={205}
-						className={`object-contain w-auto max-w-[205px] max-h-[40px]`}
+						fill
+						sizes="110px"
+						className={`object-contain object-right`}
 						alt={logoAlt ? logoAlt : "Company logo"}
 					/>
 				</div>
-			</div>
-		</div>
+			</figcaption>
+		</figure>
 	);
 };
 

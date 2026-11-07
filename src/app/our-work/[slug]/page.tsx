@@ -46,7 +46,7 @@ const WorkDetails = async ({ params }: { params: { slug: string } }) => {
 		.slice(0, 2);
 
 	return (
-		<div className="pt-[100px] pb-[40px] md:pt-[160px] md:pb-[100px] bg-primaryDark">
+		<div className="pt-[120px] pb-[80px] md:pt-[170px] md:pb-[140px] bg-primaryDark">
 			<SectionLayout>
 				<WorkDetailsBanner
 					title={data?.title?.rendered}
@@ -55,14 +55,14 @@ const WorkDetails = async ({ params }: { params: { slug: string } }) => {
 				/>
 				{data?.content?.rendered && (
 					<div
-						className="blog-details mt-[64px] md:mt-[130px] max-w-[1000px] mx-auto"
+						className="blog-details mt-[56px] md:mt-[80px] max-w-[740px] mx-auto"
 						dangerouslySetInnerHTML={{
 							__html: data?.content?.rendered,
 						}}
 					/>
 				)}
 				<WorkDetailsRecommendation
-					sectionTitle={"Other Works"}
+					sectionTitle={"More work"}
 					data={filteredPosts}
 				/>
 			</SectionLayout>

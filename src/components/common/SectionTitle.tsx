@@ -1,10 +1,11 @@
 import { SectionTitleParams } from "@/lib/types";
+import AccentText from "@/utils/accentText";
 
 const SectionTitle = ({ children, className }: SectionTitleParams) => {
 	return (
 		<h2
-			className={`${className} h2 text-[32px] leading-[40px] font-[500] text-center md:text-[40px] md:leading-[48px] lg:text-left`}>
-			{children}
+			className={`${className} h2 text-[38px] leading-[1.02] font-[500] tracking-[-0.035em] text-center md:text-[52px] lg:text-[64px] lg:text-left`}>
+			{typeof children === "string" ? <AccentText text={children} /> : children}
 		</h2>
 	);
 };

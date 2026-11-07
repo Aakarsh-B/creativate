@@ -78,10 +78,10 @@ const Input = (props: any) => {
                                     e.stopPropagation();
                                 }}
                                 className={`${props?.className ?? ''}`}>
-                                {(props?.data?.label) && (<label htmlFor={props?.data?.inputName} className={`block text-[18px] sm:text-[20px] leading-[30px] text-left text-[#F4F4F4] mb-[15px] ${(props?.data?.required || props?.required) && "after:content-['*'] after:text-[#dd0735] after:pl-[3px]"}`}>{props?.data?.label}</label>)}
+                                {(props?.data?.label) && (<label htmlFor={props?.data?.inputName} className={`block text-[18px] sm:text-[20px] leading-[30px] text-left text-[#F2F0EB] mb-[15px] ${(props?.data?.required || props?.required) && "after:content-['*'] after:text-[#dd0735] after:pl-[3px]"}`}>{props?.data?.label}</label>)}
                                 <div className={`relative`}>
                                     <select
-                                        className={`bg-[#262849] p-[16px] sm:p-[20px] rounded-[8px] w-full h-full text-[20px] leading-[24px] text-primaryLight font-[400] placeholder:text-[#F4F4F4] appearance-none transition-all duration-[0.2s] ease-in focus:!outline-offset-0 focus:!outline-0 focus:!shadow-none focus:border-[#F4F4F4] focus-visible:outline-[0px] relative z-1 cursor-pointer budget_list`}
+                                        className={`bg-primaryDark/60 border border-white/[0.08] px-[20px] py-[16px] rounded-[16px] w-full h-full text-[16px] leading-[24px] text-primaryLight font-[400] placeholder:text-primaryLight/35 outline-none focus:border-lime/60 appearance-none transition-all duration-[0.2s] ease-in relative z-1 cursor-pointer budget_list`}
                                         value={inputVal}
                                         id={props?.data?.inputName}
                                         name={props?.data?.inputName}
@@ -112,7 +112,7 @@ const Input = (props: any) => {
                                     {(props?.data?.required || props?.required) && (<span
                                         id={`${props?.data?.inputName}_error`}
                                         role="alert"
-                                        className={`text-[16px] text-[#d91f33] font-normal opacity-0 absolute bottom-[-22px] left-0 px-[2px] py-0 z-[0] input-group-wrapper__error ${styles['input-error'] ?? ''
+                                        className={`text-[13px] text-[#FF7A7A] font-[500] opacity-0 absolute bottom-[-22px] left-0 px-[2px] py-0 z-[0] input-group-wrapper__error ${styles['input-error'] ?? ''
                                             } ${props?.errorData.show ? styles['show'] ?? '' : ''}`}>
                                         {props?.errorData.msg}
                                     </span>)}
@@ -127,9 +127,9 @@ const Input = (props: any) => {
                                     e.stopPropagation();
                                 }}
                                 className={`${props?.className ?? ''}`}>
-                                {(props?.data?.label) && (<label htmlFor={props?.data?.inputName} className={`block text-[18px] sm:text-[20px] leading-[30px] text-left text-[#F4F4F4] mb-[15px] ${(props?.data?.required || props?.required) && "after:content-['*'] after:text-[#F4F4F4] after:pl-[3px]"}`}>{props?.data?.label}</label>)}
+                                {(props?.data?.label) && (<label htmlFor={props?.data?.inputName} className={`block text-[18px] sm:text-[20px] leading-[30px] text-left text-[#F2F0EB] mb-[15px] ${(props?.data?.required || props?.required) && "after:content-['*'] after:text-[#F2F0EB] after:pl-[3px]"}`}>{props?.data?.label}</label>)}
                                 <textarea
-                                    className={`text-[18px] leading-[1.5] bg-[#191B35] text-[#F4F4F4] font-normal w-full h-full p-[16px] sm:p-[20px] rounded-[4px] shadow-none placeholder:text-[#F4F4F4] ${props?.inputClassName ?? ''}`}
+                                    className={`bg-primaryDark/60 border border-white/[0.08] px-[20px] py-[16px] rounded-[16px] w-full h-full text-[16px] leading-[24px] text-primaryLight font-[400] placeholder:text-primaryLight/35 outline-none focus:border-lime/60 resize-none shadow-none ${props?.inputClassName ?? ''}`}
                                     id={props?.data?.inputName}
                                     name={props?.data?.inputName}
                                     placeholder={props?.data?.placeholder || ''}
@@ -143,7 +143,7 @@ const Input = (props: any) => {
                                 {(props?.data?.required || props?.required) && (<span
                                     id={`${props?.data?.inputName}_error`}
                                     role="alert"
-                                    className={`text-[16px] text-[#d91f33] font-normal opacity-0 absolute bottom-[-22px] left-0 px-[2px] py-0 z-[0] input-group-wrapper__error ${styles['input-error'] ?? ''
+                                    className={`text-[13px] text-[#FF7A7A] font-[500] opacity-0 absolute bottom-[-22px] left-0 px-[2px] py-0 z-[0] input-group-wrapper__error ${styles['input-error'] ?? ''
                                         } ${props?.errorData.show ? styles['show'] ?? '' : ''}`}>
                                     {props?.errorData.msg}
                                 </span>)}
@@ -158,7 +158,7 @@ const Input = (props: any) => {
                                 }}
                                 className={`${props?.className ?? ''}`}>
                                 <div className="relative">
-                                    {(props?.data?.label) && (<label htmlFor={props?.data?.inputName} className={`block text-[18px] sm:text-[20px] leading-[30px] text-left text-[#F4F4F4] mb-[10px] sm:mb-[15px] ${(props?.data?.required || props?.required) && "after:content-['*'] after:text-[#F4F4F4] after:pl-[3px]"}`}>{props?.data?.label}</label>)}
+                                    {(props?.data?.label) && (<label htmlFor={props?.data?.inputName} className={`block text-[18px] sm:text-[20px] leading-[30px] text-left text-[#F2F0EB] mb-[10px] sm:mb-[15px] ${(props?.data?.required || props?.required) && "after:content-['*'] after:text-[#F2F0EB] after:pl-[3px]"}`}>{props?.data?.label}</label>)}
                                     <input
                                         autoComplete={props?.data?.autoComplete || undefined}
                                         autoFocus={props?.data?.autoFocus || undefined}
@@ -174,7 +174,7 @@ const Input = (props: any) => {
                                         type={props?.data?.type === 'less-than' || props?.data?.type === 'greater-than' ? 'number' : 'text'}
                                         name={props?.data?.inputName}
                                         id={props?.data?.inputName}
-                                        className={`bg-[#262849] p-[16px] sm:p-[20px] rounded-[8px] w-full h-full text-[20px] leading-[24px] text-primaryLight font-[400] placeholder:text-[#F4F4F4] appearance-none transition-all duration-[0.2s] ease-in ${props?.inputClassName ?? ''}`}
+                                        className={`bg-primaryDark/60 border border-white/[0.08] px-[20px] py-[16px] rounded-[16px] w-full h-full text-[16px] leading-[24px] text-primaryLight font-[400] placeholder:text-primaryLight/35 outline-none focus:border-lime/60 appearance-none transition-all duration-[0.2s] ease-in ${props?.inputClassName ?? ''}`}
                                         // required={props?.data.required ?? true}
                                         disabled={inputStatus}
                                         aria-required={props.ariaRequired ?? 'true'}
@@ -198,7 +198,7 @@ const Input = (props: any) => {
                                         <span
                                             id={`${props?.data?.inputName}_error`}
                                             role="alert"
-                                            className={`text-[16px] text-[#d91f33] font-normal opacity-0 absolute bottom-[-25px] left-0 px-[2px] py-0 z-[0] input-group-wrapper__error ${styles['input-error'] ?? ''
+                                            className={`text-[13px] text-[#FF7A7A] font-[500] opacity-0 absolute bottom-[-25px] left-0 px-[2px] py-0 z-[0] input-group-wrapper__error ${styles['input-error'] ?? ''
                                                 } ${props?.errorData.show ? styles['show'] ?? '' : ''}`}>
                                             {props?.errorData.msg}
                                         </span>

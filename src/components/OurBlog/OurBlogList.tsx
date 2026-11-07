@@ -5,7 +5,7 @@ import BlogItem from "./BlogItem";
 const OurBlogList = ({ data }: any) => {
 	return (
 		<SectionLayout>
-			<div className="grid grid-cols-1 gap-x-[16px] gap-y-[48px] py-[48px] md:grid-cols-2 md:py-[72px] lg:grid-cols-3 lg:pb-[140px]">
+			<div className="grid grid-cols-1 gap-x-[32px] gap-y-[56px] py-[48px] md:grid-cols-2 md:gap-y-[72px] md:py-[72px] lg:grid-cols-3 lg:gap-x-[48px] lg:gap-y-[96px] lg:pb-[140px]">
 				{data?.map((item: any, index: number) => {
 					return (
 						<React.Fragment key={index}>

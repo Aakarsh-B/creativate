@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 
 // Shared SEO settings and helpers for page metadata and structured data.
 
-export const SITE_URL = "https://creativate.in";
+// creativate.in redirects to www, so www is the address search engines should index
+export const SITE_URL = "https://www.creativate.in";
 export const SITE_NAME = "Creativate";
 export const DEFAULT_TITLE =
 	"Creativate | Web Design, Branding & Social Media Agency in Kochi";

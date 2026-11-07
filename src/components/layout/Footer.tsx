@@ -1,5 +1,6 @@
 import SectionLayout from "@/templates/SectionLayout";
 import ImageLoader from "@/utils/ImageLoader";
+import socialName from "@/utils/socialName";
 import Link from "next/link";
 import NavItems from "./NavItem";
 import { getContent } from "@/lib/content";
@@ -75,7 +76,7 @@ const Footer = async () => {
 										key={index}
 										href={`${item?.link}`}
 										target="_blank"
-										aria-label="Social profile"
+										aria-label={socialName(item?.link)}
 										className="flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white/15 transition-colors duration-300 hover:bg-primaryDark">
 										<ImageLoader
 											src={item?.icon}

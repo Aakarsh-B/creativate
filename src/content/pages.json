@@ -49,8 +49,8 @@
         "bg_image": "/wp-content/uploads/2024/04/our-works-banner-bg.svg"
       },
       "metadata": {
-        "title": "Terms And Conditions title",
-        "description": "Explore our Terms and Conditions – your guide to using Creativate's website and services. By accessing our site, you agree to follow these rules. Need help? Contact us at team@creativate.in.",
+        "title": "Terms and Conditions",
+        "description": "The terms that apply when you use the Creativate website and work with us on design, development and marketing projects.",
         "keywords": ""
       }
     }
@@ -157,12 +157,12 @@
     "acf": {
       "banner": {
         "title": "Blog",
-        "description": "Discover a portfolio of visually stunning and strategically crafted digital projects that showcase our creativity and expertise.",
+        "description": "Practical guides on branding, web design, SEO and social media marketing for startups and small businesses.",
         "bg_image": "/wp-content/uploads/2024/04/our-works-banner-bg.svg"
       },
       "metadata": {
-        "title": "Blog",
-        "description": "Creativity And Innonvation For Unstoppable Growth Blog",
+        "title": "Blog: Branding, Web Design & Marketing Tips",
+        "description": "Practical guides on branding, web design, SEO and social media marketing for startups and small businesses, from the Creativate team.",
         "keywords": ""
       }
     }
@@ -217,8 +217,8 @@
         "bg_image": "/wp-content/uploads/2024/04/our-works-banner-bg.svg"
       },
       "metadata": {
-        "title": "Our works",
-        "description": "Discover a portfolio of visually stunning and strategically crafted digital projects that showcase our creativity and expertise.",
+        "title": "Our Work: Website & Branding Case Studies",
+        "description": "See websites, brand identities and redesigns Creativate has built for startups and small businesses in India, the UAE and Singapore.",
         "keywords": ""
       }
     }
@@ -454,8 +454,8 @@
         "dribble_link": ""
       },
       "metadata": {
-        "title": "Creativate - Everything you need for your Brand Building",
-        "description": "From idea to product, Creativate blend trends and tactics for unique branding and marketing, perfectly tailored to your brand.",
+        "title": "Creativate | Web Design, Branding & Social Media Agency in Kochi",
+        "description": "Design + development for startups and small businesses. Websites, branding and social media with fast turnaround and results you can actually measure.",
         "keywords": "Creativity and innovation"
       },
       "logo_slider": [
@@ -551,7 +551,7 @@
       },
       "metadata": {
         "title": "Privacy Policy",
-        "description": "Peek into our Privacy Policy! It's where we spill the beans on how we handle your info. Find out what we collect, why we collect it, and how we keep your data safe and sound. Your privacy, our priority!",
+        "description": "How Creativate collects, uses and protects the information you share with us through this website and our services.",
         "keywords": ""
       }
     }

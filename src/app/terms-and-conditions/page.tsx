@@ -1,17 +1,18 @@
 import DescBannerWithImage from "@/components/common/DescBannerWithImage";
 import { Metadata } from "next";
 import { getContent } from "@/lib/content";
+import { pageMetadata } from "@/lib/seo";
 
 export async function generateMetadata(): Promise<Metadata> {
 	const pageData = await getContent(`/pages?slug=terms-and-conditions&acf_format=standard`);
 
-	return {
-		title: pageData[0]?.acf?.metadata?.title ?? "Creativate",
-		description:
-			pageData[0]?.acf?.metadata?.description ??
-			"Creativity and innonvation for Unstoppable Growth.",
-		keywords: pageData[0]?.acf?.metadata?.keywords ?? "Creativity",
-	};
+	const meta = pageData[0]?.acf?.metadata;
+
+	return pageMetadata({
+		title: meta?.title,
+		description: meta?.description,
+		path: "/terms-and-conditions",
+	});
 }
 
 async function getData() {

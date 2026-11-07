@@ -3,17 +3,18 @@ import BookConsultation from "@/templates/BookConsultation";
 import { Metadata } from "next";
 import React from "react";
 import { getContent } from "@/lib/content";
+import { pageMetadata } from "@/lib/seo";
 
 export async function generateMetadata(): Promise<Metadata> {
 	const pageData = await getContent(`/form/?slug=book-a-consultation&acf_format=standard`);
 
-	return {
-		title: pageData[0]?.acf?.metadata?.title ?? "Creativate",
-		description:
-			pageData[0]?.acf?.metadata?.description ??
-			"Creativity and innonvation for Unstoppable Growth.",
-		keywords: pageData[0]?.acf?.metadata?.keywords ?? "Creativity",
-	};
+	const meta = pageData[0]?.acf?.metadata;
+
+	return pageMetadata({
+		title: meta?.title,
+		description: meta?.description,
+		path: "/book-consultation",
+	});
 }
 
 async function getData() {

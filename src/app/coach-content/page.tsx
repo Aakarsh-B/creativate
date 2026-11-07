@@ -6,17 +6,18 @@ import FaqContact from "@/templates/Home/FaqContact";
 import { Metadata } from "next";
 import React from "react";
 import { getContent } from "@/lib/content";
+import { pageMetadata } from "@/lib/seo";
 
 export async function generateMetadata(): Promise<Metadata> {
 	const pageData = await getContent(`/coach-content?slug=coach-content`);
 
-	return {
-		title: pageData[0]?.metadata?.title ?? "Creativate",
-		description:
-			pageData[0]?.metadata?.description ??
-			"Creativity and innonvation for Unstoppable Growth.",
-		keywords: pageData[0]?.metadata?.keywords ?? "Creativity",
-	};
+	const meta = pageData[0]?.metadata;
+
+	return pageMetadata({
+		title: meta?.title,
+		description: meta?.description,
+		path: "/coach-content",
+	});
 }
 
 async function getData() {

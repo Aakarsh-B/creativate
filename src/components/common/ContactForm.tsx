@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import FormFields from "./FormFields";
 import ImageLoader from "@/utils/ImageLoader";
+import socialName from "@/utils/socialName";
 
 const ContactForm = ({
 	formData,
@@ -38,7 +39,7 @@ const ContactForm = ({
 								key={index}
 								href={`${item?.link}`}
 								target="_blank"
-								aria-label="Social profile"
+								aria-label={socialName(item?.link)}
 								className="flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white/[0.06] transition-colors duration-300 hover:bg-white/[0.14]">
 								<ImageLoader
 									src={item?.icon}
